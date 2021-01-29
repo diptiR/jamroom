@@ -1,0 +1,38 @@
+@media only screen and (max-width: 1024px)
+ {
+    .navbar-brand
+    {
+        margin-top:10px;
+        margin-left: 5px;
+        width: 200px;
+    }
+    .navigation .navbar ul
+    {
+        margin-top:40px;
+    }
+    .navigation .navbar
+    {
+        margin-right:10px;
+    }
+    .form-inline
+    {
+        margin-top:20px;
+        margin-left:10px;
+    }
+    .navigation .nav-item
+    {
+        margin-left: 10px;
+        margin-right : 10px;
+    }
+    .contact-content .col-3
+    {
+    background-image: url('../Images/contact_address.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+    height:668px;
+    padding-top: 20px;
+    }
+}
+
+  
