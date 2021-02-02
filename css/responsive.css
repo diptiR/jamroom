@@ -24,8 +24,11 @@
         margin-left: 10px;
         margin-right : 10px;
     }
-    /* Contact Page */
-    
+    /* Crew Page Img class */
+    .crew-img
+    {
+        align-items: center;
+    }
 }
 /* 
 @media only screen and (max-width:400px)
