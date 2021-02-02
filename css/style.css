@@ -2,6 +2,7 @@
 {
     font-family: AdamFont;
     src: url(../fonts/ADAM.CGPRO.otf);
+    color: #231f1f;
 }
 @font-face
 {
@@ -12,6 +13,7 @@
 {
     font-family: TTCommonMedFont;
     src: url(../fonts/TTCommons-Medium.ttf);
+    color:#231f1f;
 }
 /* CSS for index */
 /* Footer */
@@ -58,6 +60,7 @@
 .navigation .navbar
 {
     font-family: AdamFont;
+    color:#999999;
     margin-top:50px;
     margin-bottom: 50px;
     padding-left: 0;
@@ -72,13 +75,23 @@
 {
     padding-right:0;
 }
-.form-inline input
+.hideSearch
 {
     width: 200px !important;
     height:30px;
     background-color:#cccccc;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+    visibility: hidden;
+}
+.showSearch
+{
+    width: 200px !important;
+    height:30px;
+    background-color:#cccccc;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    visibility: visible;
 }
 .form-inline button
 {
@@ -117,14 +130,48 @@
 .thumnail-content
 {
     padding: 0;
+    font-family: TTCommonMedFont;
+    color:#231f1f;
+    border-bottom: 2px solid #ffdc00;
+    height: 50px;
 }
 .thumnail-content li
 {
     list-style: none;
     display: inline-block;
-    border-right: 1px solid #cccccc;
-    padding: 0px 10px 0 5px; 
+    border-right: 1px solid #231f1f;
+    padding-right:5px;
+    padding-left: 5px;
+    line-height: 15px;
 }
+.thumnail-content li:last-child
+{
+    border-right: 0;
+}
+.thumbnail-name a
+{
+    text-decoration: none;
+    font-family: AdamFont;
+    font-size: 20px;
+    color: #231f1f;
+}
+.thumbnail-name
+{
+    padding-top:5px;
+    padding-left:2px;
+}
+.thumbnail-body
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 5px;  
+    padding-right: 5px;
+}
+.thumbnail-body:hover
+{
+    background-color: #ffdc00;
+}
+
 /* CSS for Contact Page */
 .contact-content
 {
