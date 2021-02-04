@@ -23,7 +23,8 @@
             $(".crew-data").hide();     
             
             $(".crew-body").click(function(){
-                $(this).find(".crew-data").toggle();
+                $(".crew-data").hide();     
+                $(this).find(".crew-data").show();
             });
 
         });
@@ -81,6 +82,7 @@
                     <p class="crew-name">Nariman Khambata</p>
                     <p class="crew-role">Partner, Composer & Producer</p>
                     <div class="crew-data">
+                        <div class="close" onclick="hideDetails(event, 0)">&times;</div>
                         <p class="crew-name">Nariman Khambata</p>
                         <p class="crew-role">Partner, Composer & Producer</p>
                         <p class="crew-details">Born and raised in the DC Universe, Nariman grew up on good food, good beer, and an unhealthy obsession with cheesy 80’s horror movies.<br><br>
@@ -98,6 +100,7 @@
                     <p class="crew-name">Rahul Pais</p>
                     <p class="crew-role">Partner, Composer & Producer</p>
                     <div class="crew-data">
+                        <div class="close" onclick="hideDetails(event, 1)">&times;</div>
                         <p class="crew-name">Rahul Pais</p>
                         <p class="crew-role">Partner, Composer & Producer</p>
                         <p class="crew-details">Rahul grew up in a household where music was religion. With music across genres and generations emanating from every room - very often at the same time - perhaps his love for creating new sounds began in the corridor outside.<br><br>
@@ -113,6 +116,7 @@
                     <p class="crew-name">Manju Moses</p>
                     <p class="crew-role">Manager & Producer</p>
                     <div class="crew-data">
+                        <div class="close" onclick="hideDetails(event, 2)">&times;</div>
                         <p class="crew-name">Manju Moses</p>
                         <p class="crew-role">Manager & Producer</p>
                         <p class="crew-details">From church choirgirl to Trinity School of Music electronic keyboardist, Manju ‘Mama Thug’ Moses resisted the idea of a traditional desk job and grew up envisioning life in the advertising world in Mumbai. After completing her Bachelor’s degree in Mass Media, she started her career as an agency producer with Leo Burnett India, followed by a stint at Grey Worldwide.<br><br>
@@ -127,6 +131,7 @@
                     <p class="crew-name">Yash Thakkar</p>
                     <p class="crew-role">Composer, Programmer & Arranger</p>
                     <div class="crew-data">
+                        <div class="close" onclick="hideDetails(event, 3)">&times;</div>
                         <p class="crew-name">Yash Thakkar</p>
                         <p class="crew-role">Composer, Programmer & Arranger</p>
                         <p class="crew-details">Once engineering-degree holding, thepla-eating, garba-loving model child, Yash gave it all up for a song and a dream.<br><br>
@@ -143,6 +148,7 @@
                     <p class="crew-name">Bacon</p>
                     <p class="crew-role">Morale Chief and Best Boi</p>
                     <div class="crew-data">
+                        <div class="close" onclick="hideDetails(event, 4)">&times;</div>
                         <p class="crew-name">Bacon</p>
                         <p class="crew-role">Morale Chief and Best Boi</p>
                         <p class="crew-details">
