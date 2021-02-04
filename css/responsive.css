@@ -27,19 +27,23 @@
     /* Crew Page Img class */
     .crew-img
     {
-        align-items: center;
-        width: 100%;
-        height: 100%;
+        text-align: center;
+        /* width: 100%;
+        height: 100%; */
     }
-}
-/* 
-@media only screen and (max-width:400px)
- {
-    .navbar-brand img
+    /* Our story page */
+    .about_us_pg
     {
-        margin-top:10px;
-        margin-left: 5px;
-        width: 100px;
+        width: 590px !important;
+        height: 600px !important;
     }
- } */
-  
+    .about_us
+    {
+        width: 480px;
+        height: 460px;
+        position: relative;
+        margin-left: 60px;
+        margin-top: 0;
+    }
+    
+}

@@ -1,7 +1,7 @@
-function searchFunction(event) {
-    event.preventDefault();
-    document.getElementById('inputSearch').className = "showSearch form-control"
-}
+// function searchFunction(event) {
+//     event.preventDefault();
+//     document.getElementById('inputSearch').className = "showSearch form-control"
+// }
 
 function onYouTubeIframeAPIReady() {
     var player;
