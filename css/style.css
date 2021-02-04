@@ -90,16 +90,10 @@
 .thumnail-content {
     padding: 0;
     font-family: TTCommonMedFont;
-<<<<<<< HEAD
-    color: #231f1f;
-    border-bottom: 2px solid #ffdc00;
-    height: 50px;
-=======
     color:#231f1f;
     border-bottom: 4px solid #ffdc00;
     height: 68px;
     text-align: left;
->>>>>>> 4073195d4b2af149228bbb2b8c0bd435746b7cee
 }
 .thumnail-content li {
     list-style: none;
@@ -118,17 +112,11 @@
     font-size: 20px;
     color: #231f1f;
 }
-<<<<<<< HEAD
-.thumbnail-name {
-    padding-top: 5px;
-    padding-left: 2px;
-=======
 .thumbnail-name
 {
     padding-top:5px;
     padding-left:2px;
     margin-bottom: 2px;
->>>>>>> 4073195d4b2af149228bbb2b8c0bd435746b7cee
 }
 .thumbnail-body {
     margin-top: 10px;
@@ -224,26 +212,21 @@
     padding: 15px;
     position: absolute;
     top: 210px;
-    z-index: 1;
+    z-index: 1;    
 }
 
 .crew-details {
-    font-size: 14px;
+    font-size: 12px;
+    /* height: 300px;
+    overflow: auto; */
 }
 
 /* CSS for Our story page */
-<<<<<<< HEAD
-.about-us-bg {
-    width: 100%;
-    height: 680px;
-    background-image: url("../images/about_us_bg.png");
-=======
 .about-us-bg
 {
     width:100%;
     height: 700px;
     background-image: url('../images/about_us_bg.png');
->>>>>>> 4073195d4b2af149228bbb2b8c0bd435746b7cee
     background-size: cover;
 }
 .about-us {
@@ -279,34 +262,6 @@
     position: relative;
     animation: loader-rotate 6s normal infinite;
 } */
-<<<<<<< HEAD
-@keyframes loader-rotate {
-    0% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: rotate(200px, 0px);
-    }
-    50% {
-        transform: rotate(200px, 200px);
-    }
-    75% {
-        transform: rotate(0px, 200px);
-    }
-    100% {
-        transform: rotate(0, 0);
-    }
-    /* 0%   {transform: rotate(0deg);}
-    10%  {transform: rotate(40deg);}
-    20%  {transform: rotate(80deg);}
-    30%  {transform: rotate(120deg);}
-    40%  {transform: rotate(160deg);}
-    50%  {transform: rotate(200deg);}
-    60%  {transform: rotate(240deg);}
-    70%  {transform: rotate(280deg);}
-    80% { transform: rotate(320deg);}
-    100% { transform: rotate(360deg);} */
-=======
 @keyframes loader-rotate
 {
     0%  {transform:translate(0,0);}
@@ -314,7 +269,6 @@
     50%  {transform: rotate(200px,200px);}
     75%  {transform: rotate(0px,200px);}
     100%  {transform: rotate(0,0);}
->>>>>>> 4073195d4b2af149228bbb2b8c0bd435746b7cee
 }
 
 .close {
@@ -330,4 +284,24 @@
     background-image: url("../images/about_us_bg.png");
     padding-bottom: 100px;
     background-size: cover;
+}
+
+.crew-details::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.crew-details::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.crew-details::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
 }
