@@ -14,11 +14,14 @@
 }
 /* CSS for index */
 /* Footer */
-#footer li {
+#footer{
+    padding: 0;
+}
+#footer li 
+{
     list-style: none;
     display: inline-block;
     font-family: AdamFont;
-    margin-left: 0;
     margin-top: 30px;
     padding-inline-start: 0 !important;
     text-decoration: none;
@@ -26,13 +29,19 @@
     padding: 2px 10px 0 5px;
     border-right: 2px solid #9f9f9f;
     line-height: 15px;
+    letter-spacing: 6px;
+    padding-right: 2px;
+    margin-right: 2px;
 }
-#footer li:first-child {
+#footer li:first-child 
+{
     margin-left: 0;
     padding-left: 0;
 }
 #footer li:last-child {
     border-right: 0;
+    padding-right: 0;
+    margin-right: 0;
 }
 
 /* Header */
@@ -47,28 +56,26 @@
     padding-left: 0;
     padding-right: 0;
 }
-.navigation .nav-item {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.navigation .nav-item:last-child {
-    padding-right: 0;
-}
-/* .hideSearch
+.navigation .nav-item 
 {
-    width: 200px !important;
-    height:30px;
-    background-color:#cccccc;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    visibility: hidden;
-} */
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.navigation .nav-item a
+{
+    letter-spacing: 1px;
+}
+.navigation .nav-item:last-child
+{
+    margin-right: 0;
+    padding:0;
+}
 #inputSearch {
     width: 200px !important;
     height: 30px;
     background-color: #cccccc;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
 }
 .form-inline button {
     background-image: url("../images/Search_icon.png");
@@ -78,22 +85,31 @@
     height: 30px;
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 10px;
+    
 }
-.navigation .navbar ul {
+.navigation .navbar ul 
+{
     margin-top: 40px;
 }
 .form-inline {
     margin-top: 40px;
 }
+.navbar-brand img
+{
+    width: 225px;
+}
 /* CSS for Show Reel */
-.thumnail-content {
+.thumnail-content
+ {
     padding: 0;
     font-family: TTCommonMedFont;
     color:#231f1f;
     border-bottom: 4px solid #ffdc00;
-    height: 68px;
+    width: 300px;
+    height: 75px;
     text-align: left;
+    padding-left: 6px;
+    padding-right: 10px;
 }
 .thumnail-content li {
     list-style: none;
@@ -103,14 +119,17 @@
     padding-left: 5px;
     line-height: 15px;
 }
-.thumnail-content li:last-child {
+.thumnail-content li:last-child
+{
     border-right: 0;
 }
-.thumbnail-name a {
+.thumbnail-name a 
+{
     text-decoration: none;
     font-family: AdamFont;
     font-size: 20px;
     color: #231f1f;
+    padding-left: 10px;
 }
 .thumbnail-name
 {
@@ -121,14 +140,15 @@
 .thumbnail-body {
     margin-top: 10px;
     margin-bottom: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
 }
-.thumbnail-body:hover {
+.thumbnail-body:hover 
+{
+    width:300px;
     background-color: #ffdc00;
 }
 .thumbnail-header
 {
+    width:300px;
     background-color: #231f1f;
 }
 .thumbnail-title
@@ -150,44 +170,99 @@
     padding-left:10px;
     padding-bottom: 5px;
 }
+.embed-responsive
+{
+    width:300px;
+    height:200px; 
+}
 
 /* CSS for Contact Page */
-.contact-content {
+.contact-content
+{
     margin-bottom: 100px;
 }
-.contact-content .col-lg-3 {
+.yellow-bg
+{
     background-color: #ffdc00;
-    background-size: cover;
-    width: 100%;
-    height: 700px;
-    padding-top: 100px;
 }
-.contact-content .address-name {
+.contact-content .address-name 
+{
     font-family: TTCommonBoldFont;
+    margin-bottom: 0;
+    margin-left: 25px;
 }
-.contact-content .address-content {
+.contact-content .address-content
+{
     font-family: TTCommonMedFont;
+    margin-left: 25px;
 }
-.contact-content a:hover {
+.contact-content .fb-logo
+{
+    margin-left: 11px;
+}
+.contact-content a:hover
+{
     text-decoration: none;
 }
-.responsive {
+.responsive 
+{
     width: 100%;
     height: 100%;
 }
-/* CSS for Crew */
-.crew-body {
-    margin-bottom: 50px;
+#mail-jamroom
+{
+    margin-bottom: 20px;
 }
-.crew-role {
+/* CSS for Crew */
+
+.crew-nariman
+{
+    width:350px;
+    height:250px;
+    margin-right: 16px;
+}
+.crew-img-rahul
+{
+    width:350px;
+    height:250px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+.crew-img-manju
+{
+    width:350px;
+    height:250px;
+    margin-left:32px;
+}
+.crew-img-yash
+{
+    width:350px;
+    height:250px;
+    margin-right: 16px;
+}
+.crew-img-bacon
+{
+    width:350px;
+    height:250px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+.crew-body
+{
+    margin-bottom: 50px;
+    width: 350px;
+}
+.crew-role 
+{
     font-family: TTCommonMedFont;
     color: #231f1f;
-    border-bottom: 2px solid #ffdc00;
-    width: 300px;
+    border-bottom: 4px solid #ffdc00;
+    width: 350px;
     margin-top: 0;
     padding-left: 15px;
 }
-.crew-name {
+.crew-name 
+{
     font-family: AdamFont;
     font-size: 18px;
     color: #231f1f;
@@ -196,26 +271,29 @@
     padding-bottom: 0;
     padding-left: 15px;
 }
-.crew-data .crew-role {
+.crew-data .crew-role 
+{
     border-bottom: 0;
     padding-left: 0;
 }
 
-.crew-data .crew-name {
+.crew-data .crew-name
+{
     margin-top: 0;
     padding-left: 0;
 }
-
-.crew-data {
+.crew-data
+{
     background-color: #ffdc00;
-    width: 300px;
+    width: 350px;
     padding: 15px;
     position: absolute;
     top: 210px;
     z-index: 1;    
 }
 
-.crew-details {
+.crew-details
+ {
     font-size: 12px;
     /* height: 300px;
     overflow: auto; */
@@ -225,11 +303,12 @@
 .about-us-bg
 {
     width:100%;
-    height: 700px;
+    height: 600px;
     background-image: url('../images/about_us_bg.png');
     background-size: cover;
 }
-.about-us {
+.about-us 
+{
     font-family: TTCommonMedFont;
     background-color: #ffdc00;
     width: 600px;
@@ -239,6 +318,7 @@
     margin-top: 0;
     padding-left: 20px;
     padding-right: 20px;
+    font-size:18px;
 }
 /* CSS for Loader page */
 .img-container {
@@ -280,7 +360,8 @@
     transform: translate(0%, -50%);
 }
 
-.our-story-bg {
+.our-story-bg 
+{
     background-image: url("../images/about_us_bg.png");
     padding-bottom: 100px;
     background-size: cover;
@@ -304,4 +385,9 @@
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #555;
+}
+
+.nopadding{
+    padding-left: 0!important;
+    padding-right: 0!important;
 }
