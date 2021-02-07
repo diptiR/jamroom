@@ -179,13 +179,15 @@
 /* CSS for Contact Page */
 .contact-content
 {
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 .yellow-bg
 {
     background-color: #ffdc00;
     padding-top: 45px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: flex-end;
 }
 .contact-content .address-name 
 {
