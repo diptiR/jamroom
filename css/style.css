@@ -389,3 +389,20 @@
     top: 260px;
     left: 30px;
 }
+
+.thumbnail:first-child{
+    padding-left: 0;
+}
+
+.thumbnail:nth-child(3n+3) {  
+    padding-right: 0;
+    padding-left: 80px;
+}
+
+.thumbnail:nth-child(3n+1) { 
+    padding-left: 0;
+}
+
+.thumbnail:nth-child(3n+2) { 
+    padding-left: 45px;
+}
