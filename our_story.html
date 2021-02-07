@@ -1,82 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description"
-        content="Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.3">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin."
+    />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Jekyll v3.8.3" />
 
     <title>Our Story</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
-</head>
+    <script>
+      $(document).ready(function () {
+        var classCycle = ["about-us-bg", "about-us-bg2"];
 
-<body>
+        var randomNumber = Math.floor(Math.random() * classCycle.length);
+        var classToAdd = classCycle[randomNumber];
+
+        $('#about-container').addClass(classToAdd);
+      });
+    </script>
+  </head>
+
+  <body>
     <!-- Header -->
     <div class="container">
-        <div class="row navigation">
-            <div class="col-12">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="index.html">
-                        <img class="navbar-brand" src="images/Jamroom_Logo.png" />
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+      <div class="row navigation">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+              <img class="navbar-brand" src="images/Jamroom_Logo.png" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="showreel.html">Showreel</a>
-                                <!-- <span class="sr-only">(current)</span> -->
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="our_story.html">Our story</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="crew.html">Crew</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                        <form class="form-inline">
-                            <input id="inputSearch" class="form-control hideSearch" type="search" aria-label="Search">
-                            <button class="btn my-2 my-sm-0" type="submit" onclick="searchFunction(event)"></button>
-                        </form>
-                    </div>
-                </nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="showreel.html">Showreel</a>
+                  <!-- <span class="sr-only">(current)</span> -->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="our_story.html">Our story</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="crew.html">Crew</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+              <form class="form-inline">
+                <input
+                  id="inputSearch"
+                  class="form-control hideSearch"
+                  type="search"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn my-2 my-sm-0"
+                  type="submit"
+                  onclick="searchFunction(event)"
+                ></button>
+              </form>
             </div>
+          </nav>
         </div>
+      </div>
     </div>
     <!-- Body -->
     <div class="container">
-        <div class="about-us-bg">
-            <div class="about-us"><br>
-            The Jamroom is a Music and Audio Production House based out of Singapore and Mumbai, started by Rahul Pais
-            and Nariman Khambata in 2015.<br><br>
-            The Jamroom’s forte is creating original music and audio production for TVCs and Digital Content, Film,
-            Radio, Games, Channel Branding and Animation. Our portfolio encompasses music and background scores, sound
-            design, voiceover and language dubbing, and mix and master across projects.<br><br>
-            At The Jamroom, we are passionate about our work and push ourselves and our boundaries creatively on every
-            project. We strongly believe in working collaboratively with our clients to deliver quality results at
-            cost-effective rates. Our goal is to build and maintain long-term relationships, and we strive towards
-            customising packages built to work around every budget.<br><br>
-            Sounds good? Get in touch.<br><br>
-            </div>
+      <div id="about-container">
+        <div class="about-us">
+          <br />
+          The Jamroom is a Music and Audio Production House based out of
+          Singapore and Mumbai, started by Rahul Pais and Nariman Khambata in
+          2015.<br /><br />
+          The Jamroom’s forte is creating original music and audio production
+          for TVCs and Digital Content, Film, Radio, Games, Channel Branding and
+          Animation. Our portfolio encompasses music and background scores,
+          sound design, voiceover and language dubbing, and mix and master
+          across projects.<br /><br />
+          At The Jamroom, we are passionate about our work and push ourselves
+          and our boundaries creatively on every project. We strongly believe in
+          working collaboratively with our clients to deliver quality results at
+          cost-effective rates. Our goal is to build and maintain long-term
+          relationships, and we strive towards customising packages built to
+          work around every budget.<br /><br />
+          Sounds good? Get in touch.<br /><br />
         </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

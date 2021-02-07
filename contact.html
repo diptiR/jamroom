@@ -28,6 +28,17 @@
     ></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
+    <script>
+      $(document).ready(function () {
+        var classCycle = ["contact_pg.png", "contact_pg2.jpg"];
+
+        var randomNumber = Math.floor(Math.random() * classCycle.length);
+        var classToAdd = classCycle[randomNumber];
+
+        document.getElementById("contact-bg").src = `images/${classToAdd}`;
+
+      });
+    </script>
   </head>
 
   <body>
@@ -116,7 +127,7 @@
           </div>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12" style="padding: 0">
-          <img
+          <img id="contact-bg"
             class="img responsive"
             src="images/contact_pg.png"
             alt="Responsive image"

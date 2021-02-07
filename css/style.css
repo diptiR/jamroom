@@ -14,11 +14,10 @@
 }
 /* CSS for index */
 /* Footer */
-#footer{
+#footer {
     padding: 0;
 }
-#footer li 
-{
+#footer li {
     list-style: none;
     display: inline-block;
     font-family: AdamFont;
@@ -33,8 +32,7 @@
     padding-right: 2px;
     margin-right: 2px;
 }
-#footer li:first-child 
-{
+#footer li:first-child {
     margin-left: 0;
     padding-left: 0;
 }
@@ -56,19 +54,16 @@
     padding-left: 0;
     padding-right: 0;
 }
-.navigation .nav-item 
-{
+.navigation .nav-item {
     margin-left: 25px;
     margin-right: 25px;
 }
-.navigation .nav-item a
-{
+.navigation .nav-item a {
     letter-spacing: 1px;
 }
-.navigation .nav-item:last-child
-{
+.navigation .nav-item:last-child {
     margin-right: 0;
-    padding:0;
+    padding: 0;
 }
 #inputSearch {
     width: 200px !important;
@@ -85,25 +80,21 @@
     height: 30px;
     background-repeat: no-repeat;
     background-position: center;
-    
 }
-.navigation .navbar ul 
-{
+.navigation .navbar ul {
     margin-top: 40px;
 }
 .form-inline {
     margin-top: 40px;
 }
-.navbar-brand img
-{
+.navbar-brand img {
     width: 225px;
 }
 /* CSS for Show Reel */
-.thumnail-content
- {
+.thumnail-content {
     padding: 0;
     font-family: TTCommonMedFont;
-    color:#231f1f;
+    color: #231f1f;
     border-bottom: 4px solid #ffdc00;
     width: 300px;
     height: 75px;
@@ -119,145 +110,122 @@
     padding-left: 5px;
     line-height: 15px;
 }
-.thumnail-content li:last-child
-{
+.thumnail-content li:last-child {
     border-right: 0;
 }
-.thumbnail-name a 
-{
+.thumbnail-name a {
     text-decoration: none;
     font-family: AdamFont;
     font-size: 20px;
     color: #231f1f;
     padding-left: 10px;
 }
-.thumbnail-name
-{
-    padding-top:5px;
-    padding-left:2px;
+.thumbnail-name {
+    padding-top: 5px;
+    padding-left: 2px;
     margin-bottom: 2px;
 }
 .thumbnail-body {
     margin-top: 10px;
     margin-bottom: 20px;
 }
-.thumbnail-body:hover 
-{
-    width:300px;
+.thumbnail-body:hover {
+    width: 300px;
     background-color: #ffdc00;
 }
-.thumbnail-header
-{
-    width:300px;
+.thumbnail-header {
+    width: 300px;
     background-color: #231f1f;
 }
-.thumbnail-title
-{
+.thumbnail-title {
     font-family: AdamFont;
-    color:#ffdc00;
-    margin-block-start:0;
-    margin-block-end: 0;
-    padding-left:10px;
-    padding-top:10px;
-}
-
-.thumbnail-detail
-{
-    font-family: TTCommonMedFont;
-    color:#ffffff;
+    color: #ffdc00;
     margin-block-start: 0;
     margin-block-end: 0;
-    padding-left:10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.thumbnail-detail {
+    font-family: TTCommonMedFont;
+    color: #ffffff;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-left: 10px;
     padding-bottom: 5px;
 }
-.embed-responsive
-{
-    width:300px;
-    height:200px; 
+.embed-responsive {
+    width: 300px;
+    height: 200px;
 }
 
 /* CSS for Contact Page */
-.contact-content
-{
+.contact-content {
     /* margin-bottom: 100px; */
 }
-.yellow-bg
-{
+.yellow-bg {
     background-color: #ffdc00;
     padding-top: 45px;
     padding-bottom: 30px;
     display: flex;
     align-items: flex-end;
 }
-.contact-content .address-name 
-{
+.contact-content .address-name {
     font-family: TTCommonBoldFont;
     margin-bottom: 0;
     margin-left: 25px;
 }
-.contact-content .address-content
-{
+.contact-content .address-content {
     font-family: TTCommonMedFont;
     margin-left: 25px;
 }
-.contact-content .fb-logo
-{
+.contact-content .fb-logo {
     margin-left: 11px;
 }
-.contact-content a:hover
-{
+.contact-content a:hover {
     text-decoration: none;
 }
-.responsive 
-{
+.responsive {
     width: 100%;
     height: 100%;
 }
-#mail-jamroom
-{
+#mail-jamroom {
     margin-bottom: 20px;
 }
 /* CSS for Crew */
 
-.crew-nariman
-{
-    width:350px;
-    height:250px;
+.crew-nariman {
+    width: 350px;
+    height: 250px;
     margin-right: 16px;
 }
-.crew-img-rahul
-{
-    width:350px;
-    height:250px;
+.crew-img-rahul {
+    width: 350px;
+    height: 250px;
     margin-right: 16px;
     margin-left: 16px;
 }
-.crew-img-manju
-{
-    width:350px;
-    height:250px;
-    margin-left:32px;
+.crew-img-manju {
+    width: 350px;
+    height: 250px;
+    margin-left: 32px;
 }
-.crew-img-yash
-{
-    width:350px;
-    height:250px;
+.crew-img-yash {
+    width: 350px;
+    height: 250px;
     margin-right: 16px;
 }
-.crew-img-bacon
-{
-    width:350px;
-    height:250px;
+.crew-img-bacon {
+    width: 350px;
+    height: 250px;
     margin-right: 16px;
     margin-left: 16px;
 }
-.crew-body
-{
+.crew-body {
     margin-bottom: 50px;
     width: 350px;
 }
-.crew-role 
-{
+.crew-role {
     font-family: TTCommonMedFont;
     color: #231f1f;
     border-bottom: 4px solid #ffdc00;
@@ -265,8 +233,7 @@
     margin-top: 0;
     padding-left: 15px;
 }
-.crew-name 
-{
+.crew-name {
     font-family: AdamFont;
     font-size: 18px;
     color: #231f1f;
@@ -275,44 +242,43 @@
     padding-bottom: 0;
     padding-left: 15px;
 }
-.crew-data .crew-role 
-{
+.crew-data .crew-role {
     border-bottom: 0;
     padding-left: 0;
 }
 
-.crew-data .crew-name
-{
+.crew-data .crew-name {
     margin-top: 0;
     padding-left: 0;
 }
-.crew-data
-{
+.crew-data {
     background-color: #ffdc00;
     width: 350px;
     padding: 15px;
     position: absolute;
     top: 210px;
-    z-index: 1;    
+    z-index: 1;
 }
 
-.crew-details
- {
+.crew-details {
     font-size: 12px;
     /* height: 300px;
     overflow: auto; */
 }
 
 /* CSS for Our story page */
-.about-us-bg
-{
-    width:100%;
+#about-container {
+    width: 100%;
     height: 600px;
-    background-image: url('../images/about_us_bg.png');
     background-size: cover;
 }
-.about-us 
-{
+.about-us-bg {
+    background-image: url("../images/about_us_bg.png");
+}
+.about-us-bg2 {
+    background-image: url("../images/about_us_bg2.jpg");
+}
+.about-us {
     font-family: TTCommonMedFont;
     background-color: #ffdc00;
     width: 600px;
@@ -322,7 +288,7 @@
     margin-top: 0;
     padding-left: 20px;
     padding-right: 20px;
-    font-size:18px;
+    font-size: 18px;
 }
 /* CSS for Loader page */
 .img-container {
@@ -346,13 +312,22 @@
     position: relative;
     animation: loader-rotate 6s normal infinite;
 } */
-@keyframes loader-rotate
-{
-    0%  {transform:translate(0,0);}
-    25%   {transform: rotate(200px,0px);}
-    50%  {transform: rotate(200px,200px);}
-    75%  {transform: rotate(0px,200px);}
-    100%  {transform: rotate(0,0);}
+@keyframes loader-rotate {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: rotate(200px, 0px);
+    }
+    50% {
+        transform: rotate(200px, 200px);
+    }
+    75% {
+        transform: rotate(0px, 200px);
+    }
+    100% {
+        transform: rotate(0, 0);
+    }
 }
 
 .close {
@@ -364,51 +339,53 @@
     transform: translate(0%, -50%);
 }
 
-.our-story-bg 
-{
+.our-story-bg {
     background-image: url("../images/about_us_bg.png");
     padding-bottom: 100px;
     background-size: cover;
 }
 
-.crew-details::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+.crew-details::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
 }
 
-.crew-details::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #F5F5F5;
+.crew-details::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f5f5f5;
 }
 
-.crew-details::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;
+.crew-details::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
 }
 
-.nopadding{
-    padding-left: 0!important;
-    padding-right: 0!important;
+.nopadding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
-.ml15{margin-left: 15px;}
-.ml30{margin-left: 30px;}
+.ml15 {
+    margin-left: 15px;
+}
+.ml30 {
+    margin-left: 30px;
+}
 
-.nariman .crew-data, .yash .crew-data{
+.nariman .crew-data,
+.yash .crew-data {
     top: 260px;
 }
 
-.rahul .crew-data, .bacon .crew-data{
+.rahul .crew-data,
+.bacon .crew-data {
     top: 260px;
     left: 15px;
 }
 
-.manju .crew-data{
+.manju .crew-data {
     top: 260px;
     left: 30px;
 }
