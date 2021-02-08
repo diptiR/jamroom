@@ -28,9 +28,9 @@
     padding: 2px 10px 0 5px;
     border-right: 2px solid #9f9f9f;
     line-height: 15px;
-    letter-spacing: 6px;
-    padding-right: 2px;
-    margin-right: 2px;
+    letter-spacing: 5px;
+    padding-right: 14px;
+    margin-right: 15px;
 }
 #footer li:first-child {
     margin-left: 0;
@@ -59,7 +59,7 @@
     margin-right: 25px;
 }
 .navigation .nav-item a {
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 .navigation .nav-item:last-child {
     margin-right: 0;
@@ -113,6 +113,9 @@
 .thumnail-content li:last-child {
     border-right: 0;
 }
+.thumbnail {
+    margin-bottom: 70px;
+}
 .thumbnail-name a {
     text-decoration: none;
     font-family: AdamFont;
@@ -130,11 +133,11 @@
     margin-bottom: 20px;
 }
 .thumbnail-body:hover {
-    width: 300px;
+    width: 325px;
     background-color: #ffdc00;
 }
 .thumbnail-header {
-    width: 300px;
+    width: 325px;
     background-color: #231f1f;
 }
 .thumbnail-title {
@@ -166,9 +169,10 @@
 .yellow-bg {
     background-color: #ffdc00;
     padding-top: 45px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     display: flex;
     align-items: flex-end;
+    font-size: 15px;
 }
 .contact-content .address-name {
     font-family: TTCommonBoldFont;
@@ -277,6 +281,12 @@
 }
 .about-us-bg2 {
     background-image: url("../images/about_us_bg2.jpg");
+}
+.about-us-bg3 {
+    background-image: url("../images/about_us_bg3.jpg");
+}
+.about-us-bg4 {
+    background-image: url("../images/about_us_bg4.jpg");
 }
 .about-us {
     font-family: TTCommonMedFont;
@@ -390,19 +400,29 @@
     left: 30px;
 }
 
-.thumbnail:first-child{
+.thumbnail:first-child {
     padding-left: 0;
 }
 
-.thumbnail:nth-child(3n+3) {  
+.thumbnail:nth-child(3n + 3) {
     padding-right: 0;
     padding-left: 80px;
 }
 
-.thumbnail:nth-child(3n+1) { 
+.thumbnail:nth-child(3n + 1) {
     padding-left: 0;
 }
 
-.thumbnail:nth-child(3n+2) { 
+.thumbnail:nth-child(3n + 2) {
     padding-left: 45px;
+}
+
+.contact-content .col-lg-4 {
+    max-width: 29.333333%;
+}
+
+.contact-content .col-lg-8{
+    width: 70%!important;
+    max-width: none;
+    flex: none;
 }

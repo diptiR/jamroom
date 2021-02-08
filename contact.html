@@ -30,13 +30,17 @@
     <script type="text/javascript" src="js/common.js"></script>
     <script>
       $(document).ready(function () {
-        var classCycle = ["contact_pg.png", "contact_pg2.jpg"];
+        var classCycle = [
+          "contact_pg.png",
+          "contact_pg2.jpg",
+          "contact_pg3.jpg",
+          "contact_pg4.jpg",
+        ];
 
         var randomNumber = Math.floor(Math.random() * classCycle.length);
         var classToAdd = classCycle[randomNumber];
 
         document.getElementById("contact-bg").src = `images/${classToAdd}`;
-
       });
     </script>
   </head>
@@ -127,7 +131,8 @@
           </div>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12" style="padding: 0">
-          <img id="contact-bg"
+          <img
+            id="contact-bg"
             class="img responsive"
             src="images/contact_pg.png"
             alt="Responsive image"
