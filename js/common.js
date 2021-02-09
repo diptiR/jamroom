@@ -20,3 +20,6 @@ function hideDetails(event, index) {
   event.stopPropagation();
   document.querySelectorAll(".crew-data")[index].style.display = "none";
 }
+
+
+

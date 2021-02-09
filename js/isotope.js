@@ -40,20 +40,141 @@ var $grid = $('.grid').isotope({
   $('.beauty_category').on('click', function(){
     $grid.isotope({ filter: '.beauty' });
   })
+
+  $('.orchestral_category').on('click', function(){
+    $grid.isotope({ filter: '.orchestral' });
+  })
+
+  $('.ambient_category').on('click', function(){
+    $grid.isotope({ filter: '.ambient' });
+  })
+
+  $('.blues_category').on('click', function(){
+    $grid.isotope({ filter: '.blues' });
+  })
+
+  $('.bollywood_category').on('click', function(){
+    $grid.isotope({ filter: '.bollywood' });
+  })
+
+  $('.classic_category').on('click', function(){
+    $grid.isotope({ filter: '.classic' });
+  })
+
+  $('.contemporary_category').on('click', function(){
+    $grid.isotope({ filter: '.contemporary' });
+  })
+
+  $('.dance_category').on('click', function(){
+    $grid.isotope({ filter: '.dance' });
+  })
+
+  $('.downtempo_category').on('click', function(){
+    $grid.isotope({ filter: '.downtempo' });
+  })
+
+  $('.electronic_category').on('click', function(){
+    $grid.isotope({ filter: '.electronic' });
+  })
+
+  $('.funk_category').on('click', function(){
+    $grid.isotope({ filter: '.funk' });
+  })
+
+  $('.fusion_category').on('click', function(){
+    $grid.isotope({ filter: '.fusion' });
+  })
+
+  $('.hiphop_category').on('click', function(){
+    $grid.isotope({ filter: '.hiphop' });
+  })
+
+  $('.indian_category').on('click', function(){
+    $grid.isotope({ filter: '.indian' });
+  })
+
+  $('.indie_category').on('click', function(){
+    $grid.isotope({ filter: '.indie' });
+  })
+
+  $('.jazz_category').on('click', function(){
+    $grid.isotope({ filter: '.jazz' });
+  })
+
+  $('.pop_category').on('click', function(){
+    $grid.isotope({ filter: '.pop' });
+  })
+
+  $('.retro_category').on('click', function(){
+    $grid.isotope({ filter: '.retro' });
+  })
+
+  $('.rock_category').on('click', function(){
+    $grid.isotope({ filter: '.rock' });
+  })
+
+  $('.anthem_category').on('click', function(){
+    $grid.isotope({ filter: '.anthem' });
+  })
+
+  $('.jingle_category').on('click', function(){
+    $grid.isotope({ filter: '.jingle' });
+  })
+
+  $('.rap_category').on('click', function(){
+    $grid.isotope({ filter: '.rap' });
+  })
+
+  $('.score_category').on('click', function(){
+    $grid.isotope({ filter: '.score' });
+  })
+
+  $('.vocal_category').on('click', function(){
+    $grid.isotope({ filter: '.vocal' });
+  })
+
+  $('.chill_category').on('click', function(){
+    $grid.isotope({ filter: '.chill' });
+  })
+
+  $('.cool_category').on('click', function(){
+    $grid.isotope({ filter: '.cool' });
+  })
+
+  $('.emotional_category').on('click', function(){
+    $grid.isotope({ filter: '.emotional' });
+  })
+
+  $('.empowering_category').on('click', function(){
+    $grid.isotope({ filter: '.empowering' });
+  })
+
+  $('.humour_category').on('click', function(){
+    $grid.isotope({ filter: '.humour' });
+  })
+
+  $('.kids_category').on('click', function(){
+    $grid.isotope({ filter: '.kids' });
+  })
+
+  $('.quirky_category').on('click', function(){
+    $grid.isotope({ filter: '.quirky' });
+  })
+
+  $('.romantic_category').on('click', function(){
+    $grid.isotope({ filter: '.romantic' });
+  })
+
+  $('.sexy_category').on('click', function(){
+    $grid.isotope({ filter: '.sexy' });
+  })
+
+  $('.upbeat_category').on('click', function(){
+    $grid.isotope({ filter: '.upbeat' });
+  })
+
+
   
-  // bind sort button click
-  $('#sorts').on( 'click', 'button', function() {
-    var sortByValue = $(this).attr('data-sort-by');
-    $grid.isotope({ sortBy: sortByValue });
-  });
-  
-  // change is-checked class on buttons
-  $('.button-group').each( function( i, buttonGroup ) {
-    var $buttonGroup = $( buttonGroup );
-    $buttonGroup.on( 'click', 'button', function() {
-      $buttonGroup.find('.is-checked').removeClass('is-checked');
-      $( this ).addClass('is-checked');
-    });
-  });
+
     
   

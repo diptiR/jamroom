@@ -12,6 +12,11 @@
     src: url(../fonts/TTCommons-Medium.ttf);
     color: #231f1f;
 }
+/*CSS for adding margin bottom to all pages*/
+.main-container
+{
+    margin-bottom: 50px;
+}
 /* CSS for index */
 /* Footer */
 #footer {
@@ -100,7 +105,9 @@
     height: 75px;
     text-align: left;
     padding-left: 6px;
-    padding-right: 10px;
+    padding-right: 0px; /*changes made*/
+    margin-block-start: 0; /*changes made*/
+    margin-block-end: 0; /*changes made*/
 }
 .thumnail-content li {
     list-style: none;
@@ -426,3 +433,13 @@
     max-width: none;
     flex: none;
 }
+
+.orchestral_category, .ambient_category, .blues_category, .bollywood_category, .classic_category, .contemporary_category, .dance_category, .downtempo_category,.electronic_category,
+.funk_category, .fusion_category, .hiphop_category, .indian_category, .indie_category, .jazz_category, .pop_category, .retro_category, .rock_category, .anthem_category, .jingle_category,
+.rap_category, .score_category, .vocal_category,.chill_category, .cool_category, .emotional_category,.empowering_category, .humour_category, .kids_category, .quirky_category, 
+.romantic_category, .sexy_category, .upbeat_category
+{
+    cursor:pointer;
+}
+
+
