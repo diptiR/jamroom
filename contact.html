@@ -27,7 +27,6 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
     <script>
       $(document).ready(function () {
         var classCycle = [
@@ -43,9 +42,21 @@
         document.getElementById("contact-bg").src = `images/${classToAdd}`;
       });
     </script>
+    <script type="text/javascript">
+      document.onreadystatechange = function () {
+        if (document.readyState !== "complete") {
+          document.querySelector("body").style.visibility = "hidden";
+          document.querySelector("#loader").style.visibility = "visible";
+        } else {
+          document.querySelector("#loader").style.display = "none";
+          document.querySelector("body").style.visibility = "visible";
+        }
+      };
+    </script>
   </head>
 
   <body>
+    <div id="loader" class="center"></div>
     <!-- Header -->
     <div class="container main-container">
       <div class="row navigation">
