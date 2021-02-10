@@ -28,32 +28,37 @@
     ></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-      document.onreadystatechange = function () {
-        if (document.readyState !== "complete") {
-          document.querySelector("body").style.visibility = "hidden";
-          document.querySelector("#loader").style.visibility = "visible";
-        } else {
-          document.querySelector("#loader").style.display = "none";
-          document.querySelector("body").style.visibility = "visible";
-        }
-      };
+      // document.onreadystatechange = function () {
+      //   if (document.readyState !== "complete") {
+      //     document.querySelector("body").style.visibility = "hidden";
+      //     document.querySelector("#loader").style.visibility = "visible";
+      //   } else {
+      //     document.querySelector("#loader").style.display = "none";
+      //     document.querySelector("body").style.visibility = "visible";
+      //   }
+      // };
     </script>
     <script>
       $(document).ready(function () {
-        var classCycle = ["about-us-bg", "about-us-bg2", "about-us-bg3", "about-us-bg4"];
+        var classCycle = [
+          "about-us-bg",
+          "about-us-bg2",
+          "about-us-bg3",
+          "about-us-bg4",
+        ];
 
         var randomNumber = Math.floor(Math.random() * classCycle.length);
         var classToAdd = classCycle[randomNumber];
 
-        $('#about-container').addClass(classToAdd);
+        $("#about-container").addClass(classToAdd);
       });
     </script>
   </head>
 
   <body>
-    <div id="loader" class="center">
+    <!-- <div id="loader" class="center">
       <img src="images/loader.gif" />
-  </div>
+  </div> -->
     <!-- Header -->
     <div class="container">
       <div class="row navigation">
@@ -121,7 +126,7 @@
           Animation.<br />Our portfolio encompasses music and background scores,
           sound design, voiceover and language dubbing, and mix and master
           across projects.<br /><br />
-          At The Jamroom, we are passionate about our work and push ourselves 
+          At The Jamroom, we are passionate about our work and push ourselves
           and our boundaries creatively on every project. We strongly believe in
           working collaboratively with our clients to deliver quality results at
           cost-effective rates. Our goal is to build and maintain long-term

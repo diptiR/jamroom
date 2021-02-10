@@ -26,7 +26,7 @@
     list-style: none;
     display: inline-block;
     font-family: AdamFont;
-    margin-top: 30px;
+    
     padding-inline-start: 0 !important;
     text-decoration: none;
     color: #9f9f9f;
@@ -40,6 +40,7 @@
 #footer li:first-child {
     margin-left: 0;
     padding-left: 0;
+    margin-top: 30px;
 }
 #footer li:last-child {
     border-right: 0;
@@ -101,7 +102,7 @@
     font-family: TTCommonMedFont;
     color: #231f1f;
     border-bottom: 4px solid #ffdc00;
-    width: 300px;
+    width: 100%;
     height: 75px;
     text-align: left;
     padding-left: 6px;
@@ -138,13 +139,13 @@
 .thumbnail-body {
     margin-top: 10px;
     margin-bottom: 20px;
+    width: 100%;
 }
 .thumbnail-body:hover {
-    width: 325px;
     background-color: #ffdc00;
 }
 .thumbnail-header {
-    width: 325px;
+    width: 100%;
     background-color: #231f1f;
 }
 .thumbnail-title {
@@ -298,7 +299,7 @@
 .about-us {
     font-family: TTCommonMedFont;
     background-color: #ffdc00;
-    width: 600px;
+    width: 70%;
     height: auto;
     position: relative;
     margin-left: 80px;
@@ -475,4 +476,24 @@
 
 .address-name a, .address-content a{
     color: #000;
+}
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
