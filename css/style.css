@@ -444,13 +444,19 @@
 
 
 #loader { 
-    border: 12px solid #f3f3f3; 
-    border-radius: 50%; 
-    border-top: 12px solid #444444; 
-    width: 70px; 
-    height: 70px; 
-    animation: spin 1s linear infinite; 
+    background-color: #ffdc00;
+    width: 100%;
+    height: 100%;
+    position: fixed;
 } 
+
+#loader img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -74px;
+    margin-top: -85px;
+}
   
 @keyframes spin { 
     100% { 
@@ -466,3 +472,7 @@
     right: 0; 
     margin: auto; 
 } 
+
+.address-name a, .address-content a{
+    color: #000;
+}
