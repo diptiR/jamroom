@@ -65,9 +65,23 @@
         overflow: auto;
         height: 580px;
     }
+    .crew-body{
+        margin-left: 10px;
+    }
+    .yellow-bg, .contact-hero-bg.col-lg-8{
+        width: 100% !important;
+        max-width: none!important;
+    }
+    
 }
 @media only screen and (max-width: 1025px) and (min-width: 769px){
     .navbar-brand img{
         width: 145px;
+    }
+    .crew-body{
+        width: 300px;
+    }
+    .crew-data{
+        width: 300px;
     }
 }

@@ -13,8 +13,7 @@
     color: #231f1f;
 }
 /*CSS for adding margin bottom to all pages*/
-.main-container
-{
+.main-container {
     margin-bottom: 50px;
 }
 /* CSS for index */
@@ -26,7 +25,7 @@
     list-style: none;
     display: inline-block;
     font-family: AdamFont;
-    
+
     padding-inline-start: 0 !important;
     text-decoration: none;
     color: #9f9f9f;
@@ -206,33 +205,6 @@
 }
 /* CSS for Crew */
 
-.crew-nariman {
-    width: 350px;
-    height: 250px;
-    margin-right: 16px;
-}
-.crew-img-rahul {
-    width: 350px;
-    height: 250px;
-    margin-right: 16px;
-    margin-left: 16px;
-}
-.crew-img-manju {
-    width: 350px;
-    height: 250px;
-    margin-left: 32px;
-}
-.crew-img-yash {
-    width: 350px;
-    height: 250px;
-    margin-right: 16px;
-}
-.crew-img-bacon {
-    width: 350px;
-    height: 250px;
-    margin-right: 16px;
-    margin-left: 16px;
-}
 .crew-body {
     margin-bottom: 50px;
     width: 350px;
@@ -400,12 +372,12 @@
 .rahul .crew-data,
 .bacon .crew-data {
     top: 260px;
-    left: 15px;
+    /* left: 15px; */
 }
 
 .manju .crew-data {
     top: 260px;
-    left: 30px;
+    /* left: 30px; */
 }
 
 /* .thumbnail:first-child {
@@ -429,65 +401,93 @@
     max-width: 29.333333%;
 }
 
-.contact-content .col-lg-8{
-    width: 70%!important;
+.contact-content .col-lg-8 {
+    width: 70% !important;
     max-width: none;
     flex: none;
 }
 
-.orchestral_category, .ambient_category, .blues_category, .bollywood_category, .classic_category, .contemporary_category, .dance_category, .downtempo_category,.electronic_category,
-.funk_category, .fusion_category, .hiphop_category, .indian_category, .indie_category, .jazz_category, .pop_category, .retro_category, .rock_category, .anthem_category, .jingle_category,
-.rap_category, .score_category, .vocal_category,.chill_category, .cool_category, .emotional_category,.empowering_category, .humour_category, .kids_category, .quirky_category, 
-.romantic_category, .sexy_category, .upbeat_category
-{
-    cursor:pointer;
+.orchestral_category,
+.ambient_category,
+.blues_category,
+.bollywood_category,
+.classic_category,
+.contemporary_category,
+.dance_category,
+.downtempo_category,
+.electronic_category,
+.funk_category,
+.fusion_category,
+.hiphop_category,
+.indian_category,
+.indie_category,
+.jazz_category,
+.pop_category,
+.retro_category,
+.rock_category,
+.anthem_category,
+.jingle_category,
+.rap_category,
+.score_category,
+.vocal_category,
+.chill_category,
+.cool_category,
+.emotional_category,
+.empowering_category,
+.humour_category,
+.kids_category,
+.quirky_category,
+.romantic_category,
+.sexy_category,
+.upbeat_category {
+    cursor: pointer;
 }
 
-
-#loader { 
+#loader {
     background-color: #ffdc00;
     width: 100%;
     height: 100%;
     position: fixed;
-} 
+}
 
-#loader img{
+#loader img {
     position: absolute;
     top: 50%;
     left: 50%;
     margin-left: -35px;
     margin-top: -85px;
 }
-  
-@keyframes spin { 
-    100% { 
-        transform: rotate(360deg); 
-    } 
-} 
-  
-.center { 
-    position: absolute; 
-    top: 0; 
-    bottom: 0; 
-    left: 0; 
-    right: 0; 
-    margin: auto; 
-} 
 
-.address-name a, .address-content a{
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.address-name a,
+.address-content a {
     color: #000;
 }
 
 .video-container {
     overflow: hidden;
     position: relative;
-    width:100%;
+    width: 100%;
 }
 
 .video-container::after {
     padding-top: 56.25%;
     display: block;
-    content: '';
+    content: "";
 }
 
 .video-container iframe {
@@ -496,4 +496,33 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    z-index: 1;
+    display: none;
+}
+.overlay div {
+    margin: 0 auto;
+}
+.video-border {
+    background-color: black;
+    padding: 20px;
+    width: 650px;
+    height: 500px;
+}
+.video-border span {
+    color: #ffffff;
+}
+.crew-body img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.crew-body img:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
 }

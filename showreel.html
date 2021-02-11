@@ -1,1086 +1,1439 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description"
-        content="Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.3">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin."
+    />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Jekyll v3.8.3" />
 
     <title>Show Reel</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        // document.onreadystatechange = function () {
-        //   if (document.readyState !== "complete") {
-        //     document.querySelector("body").style.visibility = "hidden";
-        //     document.querySelector("#loader").style.visibility = "visible";
-        //   } else {
-        //     document.querySelector("#loader").style.display = "none";
-        //     document.querySelector("body").style.visibility = "visible";
-        //   }
-        // };
-    </script>
-    <script type="text/javascript">
-       
-        $(function () {
-            $("body").prepend('<div id="preloader">Loading...</div>');
-            $(document).ready(function () {
-                $("#preloader").remove();
-            });
+      $(function () {
+        $("body").prepend('<div id="preloader">Loading...</div>');
+        $(document).ready(function () {
+          $("#preloader").remove();
         });
+        $(".thumbnail-img").click(function (event) {
+          $(".overlay").show();
+          $(`<div class="video-border"><img class="close-icon" width="20" align="right" src="images/close-icon.png" /><iframe width="600" height="400" src="https://www.youtube.com/embed/${event.currentTarget.id}?autoplay=1&rel=0"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe><span>Produced By:</span></div>`).appendTo(".overlay");
+          $(".close-icon").click(function () {
+            $(".overlay").hide();
+            $(".overlay").empty();
+          });
+        });
+      });
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- <div id="loader" class="center">
         <img src="images/loader.gif" />
     </div> -->
+    <div class="overlay"></div>
     <!-- Header -->
     <div class="container">
-        <div class="row navigation">
-            <div class="col-12">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="index.html">
-                        <img class="navbar-brand" src="images/Jamroom_Logo.png" />
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+      <div class="row navigation">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+              <img class="navbar-brand" src="images/Jamroom_Logo.png" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="showreel.html">Showreel</a>
-                                <!-- <span class="sr-only">(current)</span> -->
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="our_story.html">Our story</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="crew.html">Crew</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                        <form class="form-inline">
-                            <input id="inputSearch" class="form-control hideSearch" type="search" aria-label="Search">
-                            <button class="btn my-2 my-sm-0" type="submit" onclick="searchFunction(event)"></button>
-                        </form>
-                    </div>
-                </nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="showreel.html">Showreel</a>
+                  <!-- <span class="sr-only">(current)</span> -->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="our_story.html">Our story</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="crew.html">Crew</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+              <form class="form-inline">
+                <input
+                  id="inputSearch"
+                  class="form-control hideSearch"
+                  type="search"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn my-2 my-sm-0"
+                  type="submit"
+                  onclick="searchFunction(event)"
+                ></button>
+              </form>
             </div>
+          </nav>
         </div>
+      </div>
     </div>
     <!-- Body -->
     <div class="container main-container">
-        <div class="grid row">
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile orchestral score empowering">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Porsche</p>
-                    <p class="thumbnail-detail">2021</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/XaxWxgt2wCk?rel=0"
+      <div class="grid row">
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile orchestral score empowering"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Porsche</p>
+            <p class="thumbnail-detail">2021</p>
+          </div>
+          <div class="">
+            <!-- <iframe width="325" height="200" src="https://www.youtube.com/embed/XaxWxgt2wCk?rel=0"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="orchestral_category">orchestral</li>
-                        <li class="score_category">score</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary hiphop jingle vocal cool quirky upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Puma</p>
-                    <p class="thumbnail-detail">Future Rider</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/jWIJlhlxsRc?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="fashion_category" href="#">FASHION</a></p>
-                    <ul class="thumnail-content">
-                        <li class="hiphop_category">hip hop</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="quirky_category">quirky</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item healthcare contemporary downtempo jingle vocal cool sexy">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Durex Flavours</p>
-                    <p class="thumbnail-detail">Yacht</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/VER79ZWPKKg?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="healthcare_category" href="#">HEALTHCARE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="downtempo_category">downtempo</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="cool_category">cool</li>
-                        <li class="sexy_category">sexy</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion orchestral classic jazz retro jingle vocal emotional empowering romantic">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Jabong</p>
-                    <p class="thumbnail-detail">Be You</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/s2tBM7vrEwQ?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="fashion_category" href="#">FASHION</a></p>
-                    <ul class="thumnail-content">
-                        <li class="orchestral_category">orchestral</li>
-                        <li class="classic_category">classic</li>
-                        <li class="jazz_category">jazz</li>
-                        <li class="retro_category">retro</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="romantic_category">romantic</li>
-                        <li class="emotional_category">emotional</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item finance contemporary dance electronic score cool upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">OCBC</p>
-                    <p class="thumbnail-detail">Digital Capabilities (Director Cut)</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/kdxr0w3dWuY?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="finance_category" href="#">FINANCE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="dance_category">dance</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle ambient contemporary downtempo electronic score vocal emotional empowering">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Grab</p>
-                    <p class="thumbnail-detail">Never Stop</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/Be5rchs7two?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="lifestyle_category" href="#">LIFESTYLE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="ambient_category">ambient</li>
-                        <li class="electronic_category">electronic</li>
-                        <li class="downtempo_category">downtempo</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="score_category">score</li>
-                        <li class="emotional_category">emotional</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile ambient downtempo electronic score chill empowering">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Volkswagen Tiguan</p>
-                    <p class="thumbnail-detail">For the Journeys Within</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/pkuX4wMbX1A?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="ambient_category">ambient</li>
-                        <li class="electronic_category">electronic</li>
-                        <li class="downtempo_category">downtempo</li>
-                        <li class="score_category">score</li>
-                        <li class="chill_category">chill</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item beauty contemporary electronic pop anthem jingle vocal empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Lux BLG Middle East</p>
-                    <p class="thumbnail-detail">Be Ready</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/qTbruU3HOYw?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="beauty_category" href="#">BEAUTY</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="pop_category">pop</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile blues contemporary indie rock anthem jingle vocal empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Hero Motocorp</p>
-                    <p class="thumbnail-detail">We Ride</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/BFIwQyhOLEg?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="rock_category">rock</li>
-                        <li class="indie_category">indie</li>
-                        <li class="blues_category">blues</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle contemporary hiphop score cool upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Hotstar</p>
-                    <p class="thumbnail-detail">Premiere Nights</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/p3mZxkE-q7A?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="lifestyle_category" href="#">LIFESTYLE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="hiphop_category">hip hop</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary electronic score vocal cool empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Skechers</p>
-                    <p class="thumbnail-detail">Go Like Never Before</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/ixOPQn_6BzM?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="fashion_category" href="#">FASHION</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item healthcare downtempo electronic score vocal cool sexy">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title"> Durex</p>
-                    <p class="thumbnail-detail">Mutual Climax</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/zEjZvDd9L4U?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="healthcare_category" href="#">HEALTHCARE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="downtempo_category">downtempo</li>
-                        <li class="electronic_category">electronic</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="score_category">score</li>
-                        <li class="cool_category">cool</li>
-                        <li class="sexy_category">sexy</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary dance electronic score cool sexy upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Wild Spirit</p>
-                    <p class="thumbnail-detail">Never Ending Summer</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/ktL0TWn_h20?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="fashion_category" href="#">FASHION</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="dance_category">dance</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="sexy_category">sexy</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item f&b contemporary electronic rock anthem score vocal empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Absolut</p>
-                    <p class="thumbnail-detail">Create a Better Tomorrow</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/Vx66wnPgJRo?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="f&b_category" href="#">F&B</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="rock_category">rock</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item f&b contemporary dance pop jingle vocal cool quirky upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Coca Cola</p>
-                    <p class="thumbnail-detail">Good Afternoon</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/T_L-BA8uLi0?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="f&b_category" href="#">F&B</a></p>
-                    <ul class="thumnail-content">
-                        <li class="pop_category">pop</li>
-                        <li class="dance_category">dance</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="quirky_category">quirky</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item beauty contemporary electronic pop anthem vocal empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Lux Hair</p>
-                    <p class="thumbnail-detail">Shine</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/SCsNwczNfro?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="beauty_category" href="#">BEAUTY</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="pop_category">pop</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary dance electronic pop jingle vocal cool quirky upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Jabong</p>
-                    <p class="thumbnail-detail">Out of This World</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/GqxYTFNd2B4?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="fashion_category" href="#">FASHION</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="pop_category">pop</li>
-                        <li class="dance_category">dance</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="quirky_category">quirky</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle bollywood indian pop retro jingle vocal humour quirky upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">MitTV</p>
-                    <p class="thumbnail-detail">Kiska Hai</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/fzmXHquUnIw?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="lifestyle_category" href="#">LIFESTYLE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="retro_category">retro</li>
-                        <li class="pop_category">pop</li>
-                        <li class="bollywood_category">bollywood</li>
-                        <li class="indian_category">indian</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="quirky_category">quirky</li>
-                        <li class="humour_category">humour</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item f&b jazz retro score humour quirky upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Bournvita Biscuits</p>
-                    <p class="thumbnail-detail">Bananas and Oats</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/cwVoIrcUdKE?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="f&b_category" href="#">F&B</a></p>
-                    <ul class="thumnail-content">
-                        <li class="retro_category">retro</li>
-                        <li class="jazz_category">jazz</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="quirky_category">quirky</li>
-                        <li class="humour_category">humour</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item f&b contemporary dance electronic hiphop jingle rap vocal cool quirky upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Tasty Treat</p>
-                    <p class="thumbnail-detail">Taste Ka Attack</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/gDYgCzBnbWE?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="f&b_category" href="#">F&B</a></p>
-                    <ul class="thumnail-content">
-                        <li class="hiphop_category">hip hop</li>
-                        <li class="electronic_category">electronic</li>
-                        <li class="dance_category">dance</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="rap_category">rap</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="quirky_category">quirky</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile contemporary electronic fusion score vocal cool empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Volkswagen Passat</p>
-                    <p class="thumbnail-detail">Luxury You Can't Give Up</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/W69sKwwbOKY?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="fusion_category">fusion</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle bollywood indian anthem vocal empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Rajasthan Royals</p>
-                    <p class="thumbnail-detail">Halla Bol</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/omr2dgb0SDs?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="lifestyle_category" href="#">LIFESTYLE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="bollywood_category">bollywood</li>
-                        <li class="indian_category">indian</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile orchestral retro score vocal empowering">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Mahindra</p>
-                    <p class="thumbnail-detail">Alturas G4</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/vq6kmD3aMAs?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="orchestral_category">orchestral</li>
-                        <li class="retro_category">retro</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="score_category">score</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item beauty contemporary dance electronic pop jingle vocal cool upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Tresemme</p>
-                    <p class="thumbnail-detail">Shower Radio</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/fxfOLeuqNcw?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="beauty_category" href="#">BEAUTY</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="pop_category">pop</li>
-                        <li class="dance_category">dance</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion ambient downtempo electronic score vocal chill emotional empowering">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Bata Woman</p>
-                    <p class="thumbnail-detail">Comfortable With It</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/qANNAMY0YBk?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="fashion_category" href="#">FASHION</a></p>
-                    <ul class="thumnail-content">
-                        <li class="ambient_category">ambient</li>
-                        <li class="electronic_category">electronic</li>
-                        <li class="downtempo_category">downtempo</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="score_category">score</li>
-                        <li class="emotional_category">emotional</li>
-                        <li class="empowering_category">empowering</li>
-                        <li class="chill_category">chill</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile contemporary dance funk pop jingle vocal cool quirky upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Tata Tiago</p>
-                    <p class="thumbnail-detail">Hide and Seek</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/TYtlnYaneWQ?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="funk_category">funk</li>
-                        <li class="dance_category">dance</li>
-                        <li class="pop_category">pop</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="quirky_category">quirky</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle contemporary pop anthem vocal emotional empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Flipkart</p>
-                    <p class="thumbnail-detail">Choose Your Age</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/eM5NbAP69fo?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="lifestyle_category" href="#">LIFESTYLE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="pop_category">pop</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="empowering_category">empowering</li>
-                        <li class="emotional_category">emotional</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile blues indie retro rock anthem jingle vocal empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Royal Enfield</p>
-                    <p class="thumbnail-detail">Celebrate the Dark</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/HjOeyKiNsuI?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="retro_category">retro</li>
-                        <li class="rock_category">rock</li>
-                        <li class="blues_category">blues</li>
-                        <li class="indie_category">indie</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile orchestral contemporary downtempo electronic anthem score emotional empowering">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Nexa</p>
-                    <p class="thumbnail-detail">Create. Inspire.</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/MVX_raG2pxo?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="orchestral_category">orchestral</li>
-                        <li class="electronic_category">electronic</li>
-                        <li class="downtempo_category">downtempo</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="empowering_category">empowering</li>
-                        <li class="emotional_category">emotional</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion orchestral contemporary anthem jingle vocal emotional empowering">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Siyaram's</p>
-                    <p class="thumbnail-detail">Coming Home</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/MdnFreJ3Zm8?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="fashion_category" href="#">FASHION</a></p>
-                    <ul class="thumnail-content">
-                        <li class="orchestral_category">orchestral</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="empowering_category">empowering</li>
-                        <li class="emotional_category">emotional</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary electronic pop rock jingle vocal cool empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Myntra</p>
-                    <p class="thumbnail-detail">Beauty Edit</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/ogHmgQWQN0I?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="fashion_category" href="#">FASHION</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="rock_category">rock</li>
-                        <li class="pop_category">pop</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="jingle_category">jingle</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile contemporary electronic rock score cool empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Suzuki Gixxer</p>
-                    <p class="thumbnail-detail">Moment of Silence</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/Dg2aeEa1KwE?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="rock_category">rock</li>
-                        <li class="electronic_category">electronic</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="empowering_category">empowering</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle orchestral contemporary anthem score vocal emotional empowering upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Taj Hotels</p>
-                    <p class="thumbnail-detail">Tajness</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/MSBp3VNzhI8?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="lifestyle_category" href="#">LIFESTYLE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="orchestral_category">orchestral</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="empowering_category">empowering</li>
-                        <li class="emotional_category">emotional</li>
-                        <li class="upbeat_category">upbeat</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle orchestral contemporary electronic score cool emotional empowering">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Urban Ladder</p>
-                    <p class="thumbnail-detail">The Itch</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/r44p01WWfyw?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="lifestyle_category" href="#">LIFESTYLE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="orchestral_category">orchestral</li>
-                        <li class="electronic_category">electronic</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="empowering_category">empowering</li>
-                        <li class="cool_category">cool</li>
-                        <li class="emotional_category">emotional</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile bollywood contemporary indian score humour quirky upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">TVS Sport</p>
-                    <p class="thumbnail-detail">15 Ka Dum</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/iqH9DawATWw?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="indian_category">indian</li>
-                        <li class="bollywood_category">bollywood</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="quirky_category">quirky</li>
-                        <li class="humour_category">humour</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item f&b jazz score humour kids quirky upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Nu Shakti</p>
-                    <p class="thumbnail-detail">Mix Me</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/zQ-gQRyIL5s?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="f&b_category" href="#">F&B</a></p>
-                    <ul class="thumnail-content">
-                        <li class="jazz_category">jazz</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="quirky_category">quirky</li>
-                        <li class="humour_category">humour</li>
-                        <li class="kids_category">kids</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle contemporary pop anthem vocal kids quirky upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Disney</p>
-                    <p class="thumbnail-detail">Imagine That</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/SfAPDPEYIdU?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="lifestyle_category" href="#">LIFESTYLE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="pop_category">pop</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="quirky_category">quirky</li>
-                        <li class="kids_category">kids</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile contemporary electronic score cool upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Kia Seltos</p>
-                    <p class="thumbnail-detail">Badass by Design</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/ULBNSW1CgWw?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="automobile_category" href="#">AUTOMOBILE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item beauty contemporary electronic score cool upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Lakmé</p>
-                    <p class="thumbnail-detail">Absolute Spotlight</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/Xl6kLmavhmg?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="beauty_category" href="#">BEAUTY</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle contemporary electronic pop anthem vocal cool kids upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">White Hat Jr.</p>
-                    <p class="thumbnail-detail">Coding Seekho, Duniya Badlo!</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/fyl22SaDAnI?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="lifestyle_category" href="#">LIFESTYLE</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="pop_category">pop</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="vocal_category">vocal</li>
-                        <li class="anthem_category">anthem</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                        <li class="kids_category">kids</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary dance electronic score cool upbeat">
-                <div class="thumbnail-header">
-                    <p class="thumbnail-title">Pepe Jeans</p>
-                    <p class="thumbnail-detail">-</p>
-                </div>
-                <div class="video-container">
-                    <iframe width="325" height="200" src="https://www.youtube.com/embed/GgLEgGogzBg?rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail-body">
-                    <p class="thumbnail-name"><a class="fashion_category" href="#">FASHION</a></p>
-                    <ul class="thumnail-content">
-                        <li class="electronic_category">electronic</li>
-                        <li class="dance_category">dance</li>
-                        <li class="contemporary_category">contemporary</li>
-                        <li class="score_category">score</li>
-                        <li class="upbeat_category">upbeat</li>
-                        <li class="cool_category">cool</li>
-                    </ul>
-                </div>
-            </div>
-
+                        allowfullscreen></iframe> -->
+            <img
+              id="XaxWxgt2wCk"
+              class="thumbnail-img"
+              width="100%"
+              src="https://img.youtube.com/vi/XaxWxgt2wCk/0.jpg"
+            />
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="orchestral_category">orchestral</li>
+              <li class="score_category">score</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
         </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary hiphop jingle vocal cool quirky upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Puma</p>
+            <p class="thumbnail-detail">Future Rider</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/jWIJlhlxsRc?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="fashion_category" href="#">FASHION</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="hiphop_category">hip hop</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="quirky_category">quirky</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item healthcare contemporary downtempo jingle vocal cool sexy"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Durex Flavours</p>
+            <p class="thumbnail-detail">Yacht</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/VER79ZWPKKg?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="healthcare_category" href="#">HEALTHCARE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="downtempo_category">downtempo</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="cool_category">cool</li>
+              <li class="sexy_category">sexy</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion orchestral classic jazz retro jingle vocal emotional empowering romantic"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Jabong</p>
+            <p class="thumbnail-detail">Be You</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/s2tBM7vrEwQ?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="fashion_category" href="#">FASHION</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="orchestral_category">orchestral</li>
+              <li class="classic_category">classic</li>
+              <li class="jazz_category">jazz</li>
+              <li class="retro_category">retro</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="romantic_category">romantic</li>
+              <li class="emotional_category">emotional</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item finance contemporary dance electronic score cool upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">OCBC</p>
+            <p class="thumbnail-detail">Digital Capabilities (Director Cut)</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/kdxr0w3dWuY?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="finance_category" href="#">FINANCE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="dance_category">dance</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle ambient contemporary downtempo electronic score vocal emotional empowering"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Grab</p>
+            <p class="thumbnail-detail">Never Stop</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/Be5rchs7two?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="lifestyle_category" href="#">LIFESTYLE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="ambient_category">ambient</li>
+              <li class="electronic_category">electronic</li>
+              <li class="downtempo_category">downtempo</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="score_category">score</li>
+              <li class="emotional_category">emotional</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile ambient downtempo electronic score chill empowering"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Volkswagen Tiguan</p>
+            <p class="thumbnail-detail">For the Journeys Within</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/pkuX4wMbX1A?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="ambient_category">ambient</li>
+              <li class="electronic_category">electronic</li>
+              <li class="downtempo_category">downtempo</li>
+              <li class="score_category">score</li>
+              <li class="chill_category">chill</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item beauty contemporary electronic pop anthem jingle vocal empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Lux BLG Middle East</p>
+            <p class="thumbnail-detail">Be Ready</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/qTbruU3HOYw?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="beauty_category" href="#">BEAUTY</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="pop_category">pop</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="anthem_category">anthem</li>
+              <li class="jingle_category">jingle</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile blues contemporary indie rock anthem jingle vocal empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Hero Motocorp</p>
+            <p class="thumbnail-detail">We Ride</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/BFIwQyhOLEg?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="rock_category">rock</li>
+              <li class="indie_category">indie</li>
+              <li class="blues_category">blues</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="anthem_category">anthem</li>
+              <li class="jingle_category">jingle</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle contemporary hiphop score cool upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Hotstar</p>
+            <p class="thumbnail-detail">Premiere Nights</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/p3mZxkE-q7A?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="lifestyle_category" href="#">LIFESTYLE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="hiphop_category">hip hop</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary electronic score vocal cool empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Skechers</p>
+            <p class="thumbnail-detail">Go Like Never Before</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/ixOPQn_6BzM?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="fashion_category" href="#">FASHION</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item healthcare downtempo electronic score vocal cool sexy"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Durex</p>
+            <p class="thumbnail-detail">Mutual Climax</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/zEjZvDd9L4U?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="healthcare_category" href="#">HEALTHCARE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="downtempo_category">downtempo</li>
+              <li class="electronic_category">electronic</li>
+              <li class="vocal_category">vocal</li>
+              <li class="score_category">score</li>
+              <li class="cool_category">cool</li>
+              <li class="sexy_category">sexy</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary dance electronic score cool sexy upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Wild Spirit</p>
+            <p class="thumbnail-detail">Never Ending Summer</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/ktL0TWn_h20?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="fashion_category" href="#">FASHION</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="dance_category">dance</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="sexy_category">sexy</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item f&b contemporary electronic rock anthem score vocal empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Absolut</p>
+            <p class="thumbnail-detail">Create a Better Tomorrow</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/Vx66wnPgJRo?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="f&b_category" href="#">F&B</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="rock_category">rock</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="vocal_category">vocal</li>
+              <li class="anthem_category">anthem</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item f&b contemporary dance pop jingle vocal cool quirky upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Coca Cola</p>
+            <p class="thumbnail-detail">Good Afternoon</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/T_L-BA8uLi0?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="f&b_category" href="#">F&B</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="pop_category">pop</li>
+              <li class="dance_category">dance</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="quirky_category">quirky</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item beauty contemporary electronic pop anthem vocal empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Lux Hair</p>
+            <p class="thumbnail-detail">Shine</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/SCsNwczNfro?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="beauty_category" href="#">BEAUTY</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="pop_category">pop</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="anthem_category">anthem</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary dance electronic pop jingle vocal cool quirky upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Jabong</p>
+            <p class="thumbnail-detail">Out of This World</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/GqxYTFNd2B4?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="fashion_category" href="#">FASHION</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="pop_category">pop</li>
+              <li class="dance_category">dance</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="quirky_category">quirky</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle bollywood indian pop retro jingle vocal humour quirky upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">MitTV</p>
+            <p class="thumbnail-detail">Kiska Hai</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/fzmXHquUnIw?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="lifestyle_category" href="#">LIFESTYLE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="retro_category">retro</li>
+              <li class="pop_category">pop</li>
+              <li class="bollywood_category">bollywood</li>
+              <li class="indian_category">indian</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="quirky_category">quirky</li>
+              <li class="humour_category">humour</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item f&b jazz retro score humour quirky upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Bournvita Biscuits</p>
+            <p class="thumbnail-detail">Bananas and Oats</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/cwVoIrcUdKE?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="f&b_category" href="#">F&B</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="retro_category">retro</li>
+              <li class="jazz_category">jazz</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="quirky_category">quirky</li>
+              <li class="humour_category">humour</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item f&b contemporary dance electronic hiphop jingle rap vocal cool quirky upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Tasty Treat</p>
+            <p class="thumbnail-detail">Taste Ka Attack</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/gDYgCzBnbWE?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="f&b_category" href="#">F&B</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="hiphop_category">hip hop</li>
+              <li class="electronic_category">electronic</li>
+              <li class="dance_category">dance</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="rap_category">rap</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="quirky_category">quirky</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile contemporary electronic fusion score vocal cool empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Volkswagen Passat</p>
+            <p class="thumbnail-detail">Luxury You Can't Give Up</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/W69sKwwbOKY?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="fusion_category">fusion</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle bollywood indian anthem vocal empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Rajasthan Royals</p>
+            <p class="thumbnail-detail">Halla Bol</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/omr2dgb0SDs?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="lifestyle_category" href="#">LIFESTYLE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="bollywood_category">bollywood</li>
+              <li class="indian_category">indian</li>
+              <li class="vocal_category">vocal</li>
+              <li class="anthem_category">anthem</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile orchestral retro score vocal empowering"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Mahindra</p>
+            <p class="thumbnail-detail">Alturas G4</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/vq6kmD3aMAs?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="orchestral_category">orchestral</li>
+              <li class="retro_category">retro</li>
+              <li class="vocal_category">vocal</li>
+              <li class="score_category">score</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item beauty contemporary dance electronic pop jingle vocal cool upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Tresemme</p>
+            <p class="thumbnail-detail">Shower Radio</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/fxfOLeuqNcw?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="beauty_category" href="#">BEAUTY</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="pop_category">pop</li>
+              <li class="dance_category">dance</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion ambient downtempo electronic score vocal chill emotional empowering"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Bata Woman</p>
+            <p class="thumbnail-detail">Comfortable With It</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/qANNAMY0YBk?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="fashion_category" href="#">FASHION</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="ambient_category">ambient</li>
+              <li class="electronic_category">electronic</li>
+              <li class="downtempo_category">downtempo</li>
+              <li class="vocal_category">vocal</li>
+              <li class="score_category">score</li>
+              <li class="emotional_category">emotional</li>
+              <li class="empowering_category">empowering</li>
+              <li class="chill_category">chill</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile contemporary dance funk pop jingle vocal cool quirky upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Tata Tiago</p>
+            <p class="thumbnail-detail">Hide and Seek</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/TYtlnYaneWQ?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="funk_category">funk</li>
+              <li class="dance_category">dance</li>
+              <li class="pop_category">pop</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="quirky_category">quirky</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle contemporary pop anthem vocal emotional empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Flipkart</p>
+            <p class="thumbnail-detail">Choose Your Age</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/eM5NbAP69fo?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="lifestyle_category" href="#">LIFESTYLE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="pop_category">pop</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="anthem_category">anthem</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="empowering_category">empowering</li>
+              <li class="emotional_category">emotional</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile blues indie retro rock anthem jingle vocal empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Royal Enfield</p>
+            <p class="thumbnail-detail">Celebrate the Dark</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/HjOeyKiNsuI?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="retro_category">retro</li>
+              <li class="rock_category">rock</li>
+              <li class="blues_category">blues</li>
+              <li class="indie_category">indie</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="anthem_category">anthem</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile orchestral contemporary downtempo electronic anthem score emotional empowering"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Nexa</p>
+            <p class="thumbnail-detail">Create. Inspire.</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/MVX_raG2pxo?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="orchestral_category">orchestral</li>
+              <li class="electronic_category">electronic</li>
+              <li class="downtempo_category">downtempo</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="anthem_category">anthem</li>
+              <li class="empowering_category">empowering</li>
+              <li class="emotional_category">emotional</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion orchestral contemporary anthem jingle vocal emotional empowering"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Siyaram's</p>
+            <p class="thumbnail-detail">Coming Home</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/MdnFreJ3Zm8?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="fashion_category" href="#">FASHION</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="orchestral_category">orchestral</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="anthem_category">anthem</li>
+              <li class="empowering_category">empowering</li>
+              <li class="emotional_category">emotional</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary electronic pop rock jingle vocal cool empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Myntra</p>
+            <p class="thumbnail-detail">Beauty Edit</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/ogHmgQWQN0I?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="fashion_category" href="#">FASHION</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="rock_category">rock</li>
+              <li class="pop_category">pop</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="jingle_category">jingle</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile contemporary electronic rock score cool empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Suzuki Gixxer</p>
+            <p class="thumbnail-detail">Moment of Silence</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/Dg2aeEa1KwE?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="rock_category">rock</li>
+              <li class="electronic_category">electronic</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="empowering_category">empowering</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle orchestral contemporary anthem score vocal emotional empowering upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Taj Hotels</p>
+            <p class="thumbnail-detail">Tajness</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/MSBp3VNzhI8?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="lifestyle_category" href="#">LIFESTYLE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="orchestral_category">orchestral</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="vocal_category">vocal</li>
+              <li class="anthem_category">anthem</li>
+              <li class="empowering_category">empowering</li>
+              <li class="emotional_category">emotional</li>
+              <li class="upbeat_category">upbeat</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle orchestral contemporary electronic score cool emotional empowering"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Urban Ladder</p>
+            <p class="thumbnail-detail">The Itch</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/r44p01WWfyw?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="lifestyle_category" href="#">LIFESTYLE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="orchestral_category">orchestral</li>
+              <li class="electronic_category">electronic</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="empowering_category">empowering</li>
+              <li class="cool_category">cool</li>
+              <li class="emotional_category">emotional</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile bollywood contemporary indian score humour quirky upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">TVS Sport</p>
+            <p class="thumbnail-detail">15 Ka Dum</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/iqH9DawATWw?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="indian_category">indian</li>
+              <li class="bollywood_category">bollywood</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="quirky_category">quirky</li>
+              <li class="humour_category">humour</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item f&b jazz score humour kids quirky upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Nu Shakti</p>
+            <p class="thumbnail-detail">Mix Me</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/zQ-gQRyIL5s?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="f&b_category" href="#">F&B</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="jazz_category">jazz</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="quirky_category">quirky</li>
+              <li class="humour_category">humour</li>
+              <li class="kids_category">kids</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle contemporary pop anthem vocal kids quirky upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Disney</p>
+            <p class="thumbnail-detail">Imagine That</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/SfAPDPEYIdU?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="lifestyle_category" href="#">LIFESTYLE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="pop_category">pop</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="anthem_category">anthem</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="quirky_category">quirky</li>
+              <li class="kids_category">kids</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item automobile contemporary electronic score cool upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Kia Seltos</p>
+            <p class="thumbnail-detail">Badass by Design</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/ULBNSW1CgWw?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="automobile_category" href="#">AUTOMOBILE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item beauty contemporary electronic score cool upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Lakmé</p>
+            <p class="thumbnail-detail">Absolute Spotlight</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/Xl6kLmavhmg?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="beauty_category" href="#">BEAUTY</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item lifestyle contemporary electronic pop anthem vocal cool kids upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">White Hat Jr.</p>
+            <p class="thumbnail-detail">Coding Seekho, Duniya Badlo!</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/fyl22SaDAnI?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="lifestyle_category" href="#">LIFESTYLE</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="pop_category">pop</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="vocal_category">vocal</li>
+              <li class="anthem_category">anthem</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+              <li class="kids_category">kids</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item fashion contemporary dance electronic score cool upbeat"
+        >
+          <div class="thumbnail-header">
+            <p class="thumbnail-title">Pepe Jeans</p>
+            <p class="thumbnail-detail">-</p>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="325"
+              height="200"
+              src="https://www.youtube.com/embed/GgLEgGogzBg?rel=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-body">
+            <p class="thumbnail-name">
+              <a class="fashion_category" href="#">FASHION</a>
+            </p>
+            <ul class="thumnail-content">
+              <li class="electronic_category">electronic</li>
+              <li class="dance_category">dance</li>
+              <li class="contemporary_category">contemporary</li>
+              <li class="score_category">score</li>
+              <li class="upbeat_category">upbeat</li>
+              <li class="cool_category">cool</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="js/isotope.js"></script>
-</body>
-
+  </body>
 </html>
