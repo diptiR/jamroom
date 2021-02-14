@@ -32,13 +32,14 @@
         $("body").prepend('<div id="preloader">Loading...</div>');
         $(document).ready(function () {
           $("#preloader").remove();
+          $(".overlay").hide();
         });
         $(".thumbnail-img").click(function (event) {
           $(".overlay").show();
-          $(`<div class="video-border"><img class="close-icon" width="20" align="right" src="images/close-icon.png" /><iframe width="600" height="400" src="https://www.youtube.com/embed/${event.currentTarget.id}?autoplay=1&rel=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe><span>Produced By:</span></div>`).appendTo(".overlay");
+          $(`<div class="video-border">
+            <img class="close-icon" width="20" align="right" src="images/close-icon.png" />
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/${event.currentTarget.id}?autoplay=1&rel=0" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><span>Produced By:</span></div>`).appendTo(".overlay");
           $(".close-icon").click(function () {
             $(".overlay").hide();
             $(".overlay").empty();
@@ -111,64 +112,13 @@
                 </li>
               </ul>
               <form class="form-inline">
-                <div class="searchdiv">
-                  <input id="inputSearch" class="form-control hideSearch" type="search" aria-label="Search" autocomplete="false" readonly>
-                  <button class="searchBtn btn my-2 my-sm-0" type="button" onclick="myFunction()"></button>
-              </div>  
-              <!-- <div class="checkboxes">
-                  <ul class="product">
-                      <li><B>PRODUCT</B></li>
-                      <li><input type="checkbox" name="categories" value="automobile" class="chkcategory" />&nbsp;&nbsp;AUTOMOBILE</li>
-                      <li><input type="checkbox" name="categories" value="beauty" class="chkcategory" />&nbsp;&nbsp;BEAUTY</li>
-                      <li><input type="checkbox" name="categories" value="fashion" class="chkcategory" />&nbsp;&nbsp;FASHION</li>
-                      <li><input type="checkbox" name="categories" value="f&b" class="chkcategory" />&nbsp;&nbsp;F&B</li>
-                      <li><input type="checkbox" name="categories" value="finance" class="chkcategory" />&nbsp;&nbsp;FINANCE</li>
-                      <li><input type="checkbox" name="categories" value="healthcare" class="chkcategory" />&nbsp;&nbsp;HEALTHCARE</li>
-                      <li><input type="checkbox" name="categories" value="lifestyle" class="chkcategory" />&nbsp;&nbsp;LIFESTYLE</li>
-                  </ul>
-                  <ul class="genre">
-                      <li><B>GENRE</B></li>
-                      <li><input type="checkbox" name="categories" value="ambient" class="chkcategory" />&nbsp;&nbsp;ambient</li>
-                      <li><input type="checkbox" name="categories" value="blues" class="chkcategory" />&nbsp;&nbsp;blues</li>
-                      <li><input type="checkbox" name="categories" value="bollywood" class="chkcategory" />&nbsp;&nbsp;bollywood</li>
-                      <li><input type="checkbox" name="categories" value="classic" class="chkcategory" />&nbsp;&nbsp;classic</li>
-                      <li><input type="checkbox" name="categories" value="contemporary" class="chkcategory" />&nbsp;&nbsp;contemporary</li>
-                      <li><input type="checkbox" name="categories" value="dance" class="chkcategory" />&nbsp;&nbsp;dance</li>
-                      <li><input type="checkbox" name="categories" value="downtempo" class="chkcategory" />&nbsp;&nbsp;downtempo</li>
-                      <li><input type="checkbox" name="categories" value="electronic" class="chkcategory" />&nbsp;&nbsp;electronic</li>
-                      <li><input type="checkbox" name="categories" value="funk" class="chkcategory" />&nbsp;&nbsp;funk</li>
-                      <li><input type="checkbox" name="categories" value="fusion" class="chkcategory" />&nbsp;&nbsp;fusion</li>
-                      <li><input type="checkbox" name="categories" value="hiphop" class="chkcategory" />&nbsp;&nbsp;hiphop</li>
-                      <li><input type="checkbox" name="categories" value="indian" class="chkcategory" />&nbsp;&nbsp;indian</li>
-                      <li><input type="checkbox" name="categories" value="indie" class="chkcategory" />&nbsp;&nbsp;indie</li>
-                      <li><input type="checkbox" name="categories" value="jazz" class="chkcategory" />&nbsp;&nbsp;jazz</li>
-                      <li><input type="checkbox" name="categories" value="orchestral" class="chkcategory" />&nbsp;&nbsp;orchestral</li>
-                      <li><input type="checkbox" name="categories" value="pop" class="chkcategory" />&nbsp;&nbsp;pop</li>
-                      <li><input type="checkbox" name="categories" value="retro" class="chkcategory" />&nbsp;&nbsp;retro</li>
-                      <li><input type="checkbox" name="categories" value="rock" class="chkcategory" />&nbsp;&nbsp;rock</li>
-                  </ul>
-                  <ul class="style">
-                      <li><B>STYLE</B></li>
-                      <li><input type="checkbox" name="categories" value="anthem" class="chkcategory" />&nbsp;&nbsp;anthem</li>
-                      <li><input type="checkbox" name="categories" value="jingle" class="chkcategory" />&nbsp;&nbsp;jingle</li>
-                      <li><input type="checkbox" name="categories" value="rap" class="chkcategory" />&nbsp;&nbsp;rap</li>
-                      <li><input type="checkbox" name="categories" value="score" class="chkcategory" />&nbsp;&nbsp;score</li>
-                      <li><input type="checkbox" name="categories" value="vocal" class="chkcategory" />&nbsp;&nbsp;vocal</li>
-                  </ul>
-                  <ul class="mood">
-                      <li><B>MOOD</B></li>
-                      <li><input type="checkbox" name="categories" value="chill" class="chkcategory" />&nbsp;&nbsp;chill</li>
-                      <li><input type="checkbox" name="categories" value="cool" class="chkcategory" />&nbsp;&nbsp;cool</li>
-                      <li><input type="checkbox" name="categories" value="emotional" class="chkcategory" />&nbsp;&nbsp;emotional</li>
-                      <li><input type="checkbox" name="categories" value="empowering" class="chkcategory" />&nbsp;&nbsp;empowering</li>
-                      <li><input type="checkbox" name="categories" value="humour" class="chkcategory" />&nbsp;&nbsp;humour</li>
-                      <li><input type="checkbox" name="categories" value="kids" class="chkcategory" />&nbsp;&nbsp;kids</li>
-                      <li><input type="checkbox" name="categories" value="quirky" class="chkcategory" />&nbsp;&nbsp;quirky</li>
-                      <li><input type="checkbox" name="categories" value="romantic" class="chkcategory" />&nbsp;&nbsp;romantic</li>
-                      <li><input type="checkbox" name="categories" value="sexy" class="chkcategory" />&nbsp;&nbsp;sexy</li>
-                      <li><input type="checkbox" name="categories" value="upbeat" class="chkcategory" />&nbsp;&nbsp;upbeat</li>
-                  </ul>
-              </div> -->
+                <input
+                  id="inputSearch"
+                  class="form-control"
+                  type="search"
+                  aria-label="Search"
+                />
+                <button class="btn my-2 my-sm-0" type="submit"></button>
               </form>
             </div>
           </nav>
@@ -193,7 +143,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/XaxWxgt2wCk/0.jpg"
+              src="https://img.youtube.com/vi/XaxWxgt2wCk/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -226,7 +176,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/VER79ZWPKKg/0.jpg"
+              src="https://img.youtube.com/vi/VER79ZWPKKg/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -262,7 +212,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/jWIJlhlxsRc/0.jpg"
+              src="https://img.youtube.com/vi/jWIJlhlxsRc/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -300,7 +250,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/Be5rchs7two/0.jpg"
+              src="https://img.youtube.com/vi/Be5rchs7two/maxresdefault.jpg"
             />
         </div>
         <div class="thumbnail-body">
@@ -339,7 +289,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/qTbruU3HOYw/0.jpg"
+              src="https://img.youtube.com/vi/qTbruU3HOYw/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -496,7 +446,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/Vx66wnPgJRo/0.jpg"
+              src="https://img.youtube.com/vi/Vx66wnPgJRo/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -535,7 +485,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/T_L-BA8uLi0/0.jpg"
+              src="https://img.youtube.com/vi/T_L-BA8uLi0/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -567,7 +517,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/u5L0XLQxmxU/0.jpg"
+              src="https://img.youtube.com/vi/u5L0XLQxmxU/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -596,7 +546,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/hDpW_a2i5Kc/0.jpg"
+              src="https://img.youtube.com/vi/hDpW_a2i5Kc/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -636,7 +586,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/ktL0TWn_h20/0.jpg"
+              src="https://img.youtube.com/vi/ktL0TWn_h20/maxresdefault.jpg"
             />
         </div>
         <div class="thumbnail-body">
@@ -711,7 +661,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/BFIwQyhOLEg/0.jpg"
+              src="https://img.youtube.com/vi/BFIwQyhOLEg/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -744,7 +694,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/AfsQudX_tC0/0.jpg"
+              src="https://img.youtube.com/vi/AfsQudX_tC0/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -782,7 +732,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/fxfOLeuqNcw/0.jpg"
+              src="https://img.youtube.com/vi/fxfOLeuqNcw/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -821,7 +771,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/ixOPQn_6BzM/0.jpg"
+              src="https://img.youtube.com/vi/ixOPQn_6BzM/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -859,7 +809,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/p3mZxkE-q7A/0.jpg"
+              src="https://img.youtube.com/vi/p3mZxkE-q7A/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -897,7 +847,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/zEjZvDd9L4U/0.jpg"
+              src="https://img.youtube.com/vi/zEjZvDd9L4U/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -972,7 +922,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/GgLEgGogzBg/0.jpg"
+              src="https://img.youtube.com/vi/GgLEgGogzBg/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1009,7 +959,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/vq6kmD3aMAs/0.jpg"
+              src="https://img.youtube.com/vi/vq6kmD3aMAs/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1045,7 +995,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/ogHmgQWQN0I/0.jpg"
+              src="https://img.youtube.com/vi/ogHmgQWQN0I/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1085,7 +1035,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/GqxYTFNd2B4/0.jpg"
+              src="https://img.youtube.com/vi/GqxYTFNd2B4/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1164,7 +1114,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/cwVoIrcUdKE/0.jpg"
+              src="https://img.youtube.com/vi/cwVoIrcUdKE/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1201,7 +1151,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/qANNAMY0YBk/0.jpg"
+              src="https://img.youtube.com/vi/qANNAMY0YBk/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1240,7 +1190,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/TYtlnYaneWQ/0.jpg"
+              src="https://img.youtube.com/vi/TYtlnYaneWQ/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1280,7 +1230,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/Xl6kLmavhmg/0.jpg"
+              src="https://img.youtube.com/vi/Xl6kLmavhmg/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1316,7 +1266,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/ULBNSW1CgWw/0.jpg"
+              src="https://img.youtube.com/vi/ULBNSW1CgWw/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1352,7 +1302,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/fzmXHquUnIw/0.jpg"
+              src="https://img.youtube.com/vi/fzmXHquUnIw/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1392,7 +1342,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/omr2dgb0SDs/0.jpg"
+              src="https://img.youtube.com/vi/omr2dgb0SDs/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1429,7 +1379,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/iqH9DawATWw/0.jpg"
+              src="https://img.youtube.com/vi/iqH9DawATWw/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1467,7 +1417,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/eM5NbAP69fo/0.jpg"
+              src="https://img.youtube.com/vi/eM5NbAP69fo/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1505,7 +1455,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/HjOeyKiNsuI/0.jpg"
+              src="https://img.youtube.com/vi/HjOeyKiNsuI/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1545,7 +1495,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/MVX_raG2pxo/0.jpg"
+              src="https://img.youtube.com/vi/MVX_raG2pxo/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1584,7 +1534,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/MdnFreJ3Zm8/0.jpg"
+              src="https://img.youtube.com/vi/MdnFreJ3Zm8/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1622,7 +1572,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/Dg2aeEa1KwE/0.jpg"
+              src="https://img.youtube.com/vi/Dg2aeEa1KwE/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1660,7 +1610,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/MSBp3VNzhI8/0.jpg"
+              src="https://img.youtube.com/vi/MSBp3VNzhI8/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1699,7 +1649,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/r44p01WWfyw/0.jpg"
+              src="https://img.youtube.com/vi/r44p01WWfyw/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1737,7 +1687,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/fyl22SaDAnI/0.jpg"
+              src="https://img.youtube.com/vi/fyl22SaDAnI/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">
@@ -1776,7 +1726,7 @@
               class="thumbnail-img"
               width="100%"
               height="200"
-              src="https://img.youtube.com/vi/SfAPDPEYIdU/0.jpg"
+              src="https://img.youtube.com/vi/SfAPDPEYIdU/maxresdefault.jpg"
             />
           </div>
           <div class="thumbnail-body">

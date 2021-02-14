@@ -504,16 +504,18 @@
     background-color: rgba(255, 255, 255, 0.5);
     position: fixed;
     z-index: 1;
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 .overlay div {
     margin: 0 auto;
 }
 .video-border {
-    background-color: black;
+    background-color: #000;
     padding: 20px;
-    width: 650px;
-    height: 500px;
+    width: 75%;
+    height: 580px;
 }
 .video-border span {
     color: #ffffff;
