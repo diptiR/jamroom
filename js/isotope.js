@@ -173,6 +173,12 @@ var $grid = $('.grid').isotope({
     $grid.isotope({ filter: '.upbeat' });
   })
 
+  $('.accoustic_category').on('click', function(){
+    $grid.isotope({ filter: '.accoustic' });
+  })
+
+
+
 
   
 
