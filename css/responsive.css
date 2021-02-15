@@ -1,57 +1,50 @@
-@media only screen and (max-width: 1024px)
- {
-    .navbar-brand
-    {
-        margin-top:10px;
+@media only screen and (max-width: 1024px) {
+    .navbar-brand {
+        margin-top: 10px;
         margin-left: 5px;
         width: 150px;
     }
-    .navigation .navbar ul
-    {
-        margin-top:40px;
+    .navigation .navbar ul {
+        margin-top: 40px;
     }
-    .navigation .navbar
-    {
-        margin-right:10px;
+    .navigation .navbar {
+        margin-right: 10px;
         margin-top: 20px;
     }
-    .form-inline
-    {
-        margin-top:20px;
-        margin-left:10px;
-    }
-    .navigation .nav-item
-    {
+    .form-inline {
+        margin-top: 20px;
         margin-left: 10px;
-        margin-right : 10px;
+    }
+    .navigation .nav-item {
+        margin-left: 10px;
+        margin-right: 10px;
     }
     /* Crew Page Img class */
-    .crew-img
-    {
+    .crew-img {
         text-align: center;
         /* width: 100%;
         height: 100%; */
     }
     /* Our story page */
-    .about_us_pg
-    {
+    .about_us_pg {
         width: 300;
         height: 750px;
     }
-    .about_us
-    {
+    .about_us {
         width: 300px !important;
         height: auto;
         position: relative;
-        margin-left:10px;
+        margin-left: 10px;
         margin-top: 0;
     }
+    .video-border {
+        width: 80%;
+        height: 30%;
+    }
 }
-@media only screen and (max-width: 500px)
-{
+@media only screen and (max-width: 500px) {
     /* Show reel page */
-    .thumnail-content
-    {
+    .thumnail-content {
         height: auto;
     }
 
@@ -66,23 +59,23 @@
         overflow: auto;
         height: 580px;
     }
-    .crew-body{
+    .crew-body {
         margin-left: 10px;
     }
-    .yellow-bg, .contact-hero-bg.col-lg-8{
+    .yellow-bg,
+    .contact-hero-bg.col-lg-8 {
         width: 100% !important;
-        max-width: none!important;
+        max-width: none !important;
     }
-    
 }
-@media only screen and (max-width: 1025px) and (min-width: 769px){
-    .navbar-brand img{
+@media only screen and (max-width: 1025px) and (min-width: 769px) {
+    .navbar-brand img {
         width: 145px;
     }
-    .crew-body{
+    .crew-body {
         width: 300px;
     }
-    .crew-data{
+    .crew-data {
         width: 300px;
     }
 }
