@@ -24,7 +24,9 @@
 
             $(".crew-body").click(function () {
                 $(".crew-data").hide();
+                $(".crew-body img").removeClass("colorImg");
                 $(this).find(".crew-data").show();
+                $(this).find("img").addClass("colorImg")
             });
             $("body").prepend('<div id="preloader">Loading...</div>');
             $(document).ready(function () {
@@ -35,6 +37,7 @@
     <script type="text/javascript">
         function hideDetails(event, index) {
             event.stopPropagation();
+            $(".crew-body img").removeClass("colorImg");
             document.querySelectorAll(".crew-data")[index].style.display = "none";
         }
         // document.onreadystatechange = function () {
