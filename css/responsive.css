@@ -10,6 +10,7 @@
     .navigation .navbar {
         margin-right: 10px;
         margin-top: 20px;
+        margin-bottom: 20px;
     }
     .form-inline {
         margin-top: 20px;
@@ -41,6 +42,10 @@
         width: 80%;
         height: 30%;
     }
+    .reset-icon {
+        margin-left: 0;
+        right: 25px;
+    }
 }
 @media only screen and (max-width: 500px) {
     #footer li:first-child {
@@ -52,6 +57,11 @@
     /* Show reel page */
     .thumnail-content {
         height: auto;
+    }
+
+    .reset-icon {
+        margin-left: 0;
+        right: 15px;
     }
 
     #footer {
