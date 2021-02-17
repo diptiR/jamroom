@@ -604,3 +604,45 @@
     -webkit-filter: grayscale(0%)!important;
     filter: grayscale(0%)!important;
 }
+.orchestral_category a:hover,
+.ambient_category a:hover,
+.blues_category a:hover,
+.bollywood_category a:hover,
+.classic_category a:hover,
+.contemporary_category a:hover,
+.dance_category a:hover,
+.downtempo_category a:hover,
+.electronic_category a:hover,
+.funk_category a:hover,
+.fusion_category a:hover,
+.hiphop_category a:hover,
+.indian_category a:hover,
+.indie_category a:hover,
+.jazz_category a:hover,
+.pop_category a:hover,
+.retro_category a:hover,
+.rock_category a:hover,
+.anthem_category a:hover,
+.jingle_category a:hover,
+.rap_category a:hover,
+.score_category a:hover,
+.vocal_category a:hover,
+.chill_category a:hover,
+.cool_category a:hover,
+.emotional_category a:hover,
+.empowering_category a:hover,
+.humour_category a:hover,
+.kids_category a:hover,
+.quirky_category a:hover,
+.romantic_category a:hover,
+.sexy_category a:hover,
+.upbeat_category a:hover,
+.accoustic_category a:hover
+{
+    border-bottom: 3px solid #231f1f;
+    padding-bottom: 2px;
+}
+.show_all
+{
+    z-index: 0;
+}

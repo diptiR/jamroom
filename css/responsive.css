@@ -74,7 +74,7 @@
         max-width: none !important;
     }
 }
-@media only screen and (max-width: 1025px) and (min-width: 769px) {
+@media only screen and (max-width: 1025px) and (min-width: 768px) {
     .navbar-brand img {
         width: 145px;
     }
@@ -83,5 +83,9 @@
     }
     .crew-data {
         width: 300px;
+    }
+    #footer li:first-child
+    {
+        margin-left: 0px;
     }
 }
