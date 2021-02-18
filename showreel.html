@@ -50,6 +50,9 @@
       });
       //Javascript for Search box
       $(document).ready(function () {
+        $(".checkbox-close-icon").click(() => {
+          $(".checkboxes").hide();
+        })
         $(".checkboxes").hide();
             // $("#inputSearch").click(function (event) {
             //     $(".checkboxes").show();
@@ -118,8 +121,12 @@
               <form class="form-inline">
                 <div id="inputSearch" class="form-control inputStyle"></div>
                   <!-- <input id="inputSearch" class="form-control hideSearch" type="search" aria-label="Search" autocomplete="false" readonly> -->
-                  <button class="searchBtn btn my-2 my-sm-0" type="button" onclick="myFunction()"></button>
+                  <button class="searchBtn btn my-2 my-sm-0" type="button"></button>
               <div class="checkboxes">
+                  <div class="checkbox-close-icon">
+                    <img width="20" src="images/close-icon.png" />
+                  </div>
+                  <div class="scrollarea">
                   <ul class="product">
                       <li><B>PRODUCT</B></li>
                       <li><input type="checkbox" name="categories" value="automobile" class="chkcategory" />&nbsp;&nbsp;AUTOMOBILE</li>
@@ -172,6 +179,10 @@
                       <li><input type="checkbox" name="categories" value="sexy" class="chkcategory" />&nbsp;&nbsp;sexy</li>
                       <li><input type="checkbox" name="categories" value="upbeat" class="chkcategory" />&nbsp;&nbsp;upbeat</li>
                   </ul>
+                  </div>
+                <div class="btn-container">
+                  <button class="searchBtn" type="button">Search</button>
+                </div>
               </div>
               </form>
             </div>
