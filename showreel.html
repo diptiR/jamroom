@@ -35,6 +35,7 @@
           $("#preloader").remove();
           $(".overlay").hide();
         });
+        //Javascript for pop up video
         $(".thumbnail-img").click(function (event) {
           $(".overlay").show();
           $(`<div class="video-border">
@@ -47,7 +48,7 @@
           });
         });
       });
-      //Search box code
+      //Javascript for Search box
       // $(document).ready(function () {
       //       $("#inputSearch").click(function (event) {
       //           $(".checkboxes").css("visibility", "visible");
@@ -68,7 +69,8 @@
       //               $(".checkboxes").toggle();
       //       });
       //   });
-    </script>
+</script>
+
   </head>
 
   <body>
@@ -1534,7 +1536,36 @@
             </ul>
           </div>
         </div> -->
-        
+      <div class="top_btn_div">
+        <a href="#"><img class="top_btn_img" id="myBtn" width="40" src="Images/up_button_new.png" onclick="topFunction()" /></a>
+      </div>
+      <script>
+        //Javascript for top button
+          var topbtnimg = document.getElementById("myBtn");
+          // When the user scrolls down 30px from the top of the document, show the button
+          window.onscroll = function() 
+          {
+            scrollFunction()
+          };
+          function scrollFunction()
+          {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) 
+            {
+              topbtnimg.style.display = "block";
+            } 
+            else
+            {
+              topbtnimg.style.display = "none";
+            }
+          }
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() 
+          {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+    </script>
+      </div>
       </div>
     </div>
     <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>

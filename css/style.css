@@ -182,11 +182,13 @@
 }
 .contact-content .address-name {
     font-family: TTCommonBoldFont;
+    font-size: large;
     margin-bottom: 0;
     margin-left: 25px;
 }
 .contact-content .address-content {
     font-family: TTCommonMedFont;
+    font-size: medium;
     margin-left: 25px;
 }
 .contact-content .fb-logo {
@@ -647,3 +649,23 @@
 {
     z-index: 0;
 }
+.thumbnail-img:hover
+{
+    cursor: pointer;
+}
+.top_btn_div
+{
+    width:30px;
+    height: 30px;
+    float:right;
+}
+.top_btn_img
+{
+    display: none;
+    position: fixed;
+    /*bottom: 20px;*/
+    right: 325px; 
+    z-index: 99;
+    cursor: pointer;
+}
+
