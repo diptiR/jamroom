@@ -49,26 +49,27 @@
         });
       });
       //Javascript for Search box
-      // $(document).ready(function () {
-      //       $("#inputSearch").click(function (event) {
-      //           $(".checkboxes").css("visibility", "visible");
-      //       });
-      //       $(".searchBtn").click(function () {
-      //           var selectedCategory = "";
-      //           var checkboxes = $("input[class='chkcategory']:checked");
-      //           for(var i=0; i<checkboxes.length;){
-      //               selectedCategory = selectedCategory + `.${checkboxes[i].value}`;
-      //               i++;
-      //               if(i<checkboxes.length) {
-      //                   selectedCategory = selectedCategory + ",";
-      //               }
-      //           }
-      //           $grid.isotope({ filter: selectedCategory });
-      //       });
-      //           $("#inputSearch").click(function(){
-      //               $(".checkboxes").toggle();
-      //       });
-      //   });
+      $(document).ready(function () {
+        $(".checkboxes").hide();
+            // $("#inputSearch").click(function (event) {
+            //     $(".checkboxes").show();
+            // });
+            $(".searchBtn").click(function () {
+                var selectedCategory = "";
+                var checkboxes = $("input[class='chkcategory']:checked");
+                for(var i=0; i<checkboxes.length;){
+                    selectedCategory = selectedCategory + `.${checkboxes[i].value}`;
+                    i++;
+                    if(i<checkboxes.length) {
+                        selectedCategory = selectedCategory + ",";
+                    }
+                }
+                $grid.isotope({ filter: selectedCategory });
+            });
+                $("#inputSearch").click(function(){
+                    $(".checkboxes").toggle();
+            });
+        });
 </script>
 
   </head>
@@ -115,13 +116,63 @@
                 </li>
               </ul>
               <form class="form-inline">
-                <input
-                  id="inputSearch"
-                  class="form-control"
-                  type="search"
-                  aria-label="Search"
-                />
-                <button class="btn my-2 my-sm-0" type="submit"></button>
+                <div id="inputSearch" class="form-control inputStyle"></div>
+                  <!-- <input id="inputSearch" class="form-control hideSearch" type="search" aria-label="Search" autocomplete="false" readonly> -->
+                  <button class="searchBtn btn my-2 my-sm-0" type="button" onclick="myFunction()"></button>
+              <div class="checkboxes">
+                  <ul class="product">
+                      <li><B>PRODUCT</B></li>
+                      <li><input type="checkbox" name="categories" value="automobile" class="chkcategory" />&nbsp;&nbsp;AUTOMOBILE</li>
+                      <li><input type="checkbox" name="categories" value="beauty" class="chkcategory" />&nbsp;&nbsp;BEAUTY</li>
+                      <li><input type="checkbox" name="categories" value="fashion" class="chkcategory" />&nbsp;&nbsp;FASHION</li>
+                      <li><input type="checkbox" name="categories" value="f&b" class="chkcategory" />&nbsp;&nbsp;F&B</li>
+                      <li><input type="checkbox" name="categories" value="finance" class="chkcategory" />&nbsp;&nbsp;FINANCE</li>
+                      <li><input type="checkbox" name="categories" value="healthcare" class="chkcategory" />&nbsp;&nbsp;HEALTHCARE</li>
+                      <li><input type="checkbox" name="categories" value="lifestyle" class="chkcategory" />&nbsp;&nbsp;LIFESTYLE</li>
+                  </ul>
+                  <ul class="genre">
+                      <li><B>GENRE</B></li>
+                      <li><input type="checkbox" name="categories" value="ambient" class="chkcategory" />&nbsp;&nbsp;ambient</li>
+                      <li><input type="checkbox" name="categories" value="blues" class="chkcategory" />&nbsp;&nbsp;blues</li>
+                      <li><input type="checkbox" name="categories" value="bollywood" class="chkcategory" />&nbsp;&nbsp;bollywood</li>
+                      <li><input type="checkbox" name="categories" value="classic" class="chkcategory" />&nbsp;&nbsp;classic</li>
+                      <li><input type="checkbox" name="categories" value="contemporary" class="chkcategory" />&nbsp;&nbsp;contemporary</li>
+                      <li><input type="checkbox" name="categories" value="dance" class="chkcategory" />&nbsp;&nbsp;dance</li>
+                      <li><input type="checkbox" name="categories" value="downtempo" class="chkcategory" />&nbsp;&nbsp;downtempo</li>
+                      <li><input type="checkbox" name="categories" value="electronic" class="chkcategory" />&nbsp;&nbsp;electronic</li>
+                      <li><input type="checkbox" name="categories" value="funk" class="chkcategory" />&nbsp;&nbsp;funk</li>
+                      <li><input type="checkbox" name="categories" value="fusion" class="chkcategory" />&nbsp;&nbsp;fusion</li>
+                      <li><input type="checkbox" name="categories" value="hiphop" class="chkcategory" />&nbsp;&nbsp;hiphop</li>
+                      <li><input type="checkbox" name="categories" value="indian" class="chkcategory" />&nbsp;&nbsp;indian</li>
+                      <li><input type="checkbox" name="categories" value="indie" class="chkcategory" />&nbsp;&nbsp;indie</li>
+                      <li><input type="checkbox" name="categories" value="jazz" class="chkcategory" />&nbsp;&nbsp;jazz</li>
+                      <li><input type="checkbox" name="categories" value="orchestral" class="chkcategory" />&nbsp;&nbsp;orchestral</li>
+                      <li><input type="checkbox" name="categories" value="pop" class="chkcategory" />&nbsp;&nbsp;pop</li>
+                      <li><input type="checkbox" name="categories" value="retro" class="chkcategory" />&nbsp;&nbsp;retro</li>
+                      <li><input type="checkbox" name="categories" value="rock" class="chkcategory" />&nbsp;&nbsp;rock</li>
+                  </ul>
+                  <ul class="style">
+                      <li><B>STYLE</B></li>
+                      <li><input type="checkbox" name="categories" value="anthem" class="chkcategory" />&nbsp;&nbsp;anthem</li>
+                      <li><input type="checkbox" name="categories" value="jingle" class="chkcategory" />&nbsp;&nbsp;jingle</li>
+                      <li><input type="checkbox" name="categories" value="rap" class="chkcategory" />&nbsp;&nbsp;rap</li>
+                      <li><input type="checkbox" name="categories" value="score" class="chkcategory" />&nbsp;&nbsp;score</li>
+                      <li><input type="checkbox" name="categories" value="vocal" class="chkcategory" />&nbsp;&nbsp;vocal</li>
+                  </ul>
+                  <ul class="mood">
+                      <li><B>MOOD</B></li>
+                      <li><input type="checkbox" name="categories" value="chill" class="chkcategory" />&nbsp;&nbsp;chill</li>
+                      <li><input type="checkbox" name="categories" value="cool" class="chkcategory" />&nbsp;&nbsp;cool</li>
+                      <li><input type="checkbox" name="categories" value="emotional" class="chkcategory" />&nbsp;&nbsp;emotional</li>
+                      <li><input type="checkbox" name="categories" value="empowering" class="chkcategory" />&nbsp;&nbsp;empowering</li>
+                      <li><input type="checkbox" name="categories" value="humour" class="chkcategory" />&nbsp;&nbsp;humour</li>
+                      <li><input type="checkbox" name="categories" value="kids" class="chkcategory" />&nbsp;&nbsp;kids</li>
+                      <li><input type="checkbox" name="categories" value="quirky" class="chkcategory" />&nbsp;&nbsp;quirky</li>
+                      <li><input type="checkbox" name="categories" value="romantic" class="chkcategory" />&nbsp;&nbsp;romantic</li>
+                      <li><input type="checkbox" name="categories" value="sexy" class="chkcategory" />&nbsp;&nbsp;sexy</li>
+                      <li><input type="checkbox" name="categories" value="upbeat" class="chkcategory" />&nbsp;&nbsp;upbeat</li>
+                  </ul>
+              </div>
               </form>
             </div>
           </nav>
@@ -1537,7 +1588,7 @@
           </div>
         </div> -->
       <div class="top_btn_div">
-        <a href="#"><img class="top_btn_img" id="myBtn" width="40" src="Images/up_button_new.png" onclick="topFunction()" /></a>
+        <a href="#"><img class="top_btn_img" id="myBtn" width="40" src="images/up_button_new.png" onclick="topFunction()" /></a>
       </div>
       <script>
         //Javascript for top button
