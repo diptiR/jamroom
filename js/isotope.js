@@ -16,6 +16,7 @@ var $grid = $(".grid").isotope({
   },
 });
 
+
 $(".show_all").on("click", function () {
   removeSelected();
   $grid.isotope({ filter: "*" });

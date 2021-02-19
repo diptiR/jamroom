@@ -52,6 +52,7 @@
       $(document).ready(function () {
         $(".checkbox-close-icon").click(() => {
           $(".checkboxes").hide();
+          $('.checkboxes input[class="chkcategory"]').prop('checked', false);
         })
         $(".checkboxes").hide();
             // $("#inputSearch").click(function (event) {
