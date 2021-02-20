@@ -599,8 +599,8 @@
 .reset-icon {
     position: fixed;
     z-index: 2;
-    margin-top: -50px;
-    margin-left: 1060px;
+    bottom: 75px;
+    margin-left: 1180px;
 }
 .selected {
     border-bottom: 3px solid #231f1f;
@@ -654,17 +654,18 @@
     cursor: pointer;
 }
 .top_btn_div {
-    width: 30px;
-    height: 30px;
-    float: right;
+    position: fixed;
+    z-index: 2;
+    bottom: 20px;
+    margin-left: 1180px;
 }
 .top_btn_img {
     display: none;
-    position: fixed;
+    /* position: fixed;
     bottom: 20px;
     margin-left: 1180px;
     z-index: 10;
-    cursor: pointer;
+    cursor: pointer; */
 }
 .checkbox-close-icon {
     float: right;

@@ -17,7 +17,7 @@
     <meta name="generator" content="Jekyll v3.8.3" />
 
     <title>THE JAMROOM | SHOWREEL</title>
-    <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.png" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -40,7 +40,9 @@
           $(`<div class="video-border">
             <img class="close-icon" width="20" align="right" src="images/close-icon.png" />
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${event.currentTarget.id}?autoplay=1&rel=0" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`).appendTo(".overlay");
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`).appendTo(
+            ".overlay"
+          );
           $(".close-icon").click(function () {
             $(".overlay").hide();
             $(".overlay").empty();
@@ -69,356 +71,394 @@
       //       });
       //   });
     </script>
-          <script type="text/javascript">
-            var genre_style_mood;
-            var videosData = [
-            {
-              title: "Porsche",
-              detail: "2021",
-              videoId: "XaxWxgt2wCk",
-              genre_style_mood: 'ORCHESTRAL SCORE EMPOWERING',
-              product: "AUTOMOBILE"
-            },
-            {
-              title: "Durex Flavours",
-              detail: "Yacht",
-              videoId: "VER79ZWPKKg",
-              genre_style_mood: 'DOWNTEMPO CONTEMPORARY VOCAL JINGLE COOL SEXY',
-              product: "HEALTHCARE",
-            },
-            {
-              title: "Puma",
-              detail: "Future Rider",
-              videoId: "jWIJlhlxsRc",
-              genre_style_mood: 'HIPHOP SCORE VOCAL JINGLE UPBEAT COOL QUIRKY',
-              product: "FASHION",
-            },
-            {
-              title: "Grab",
-              detail: "Never Stop",
-              videoId: "Be5rchs7two",
-              genre_style_mood: 'AMBIENT ELECTRONIC DOWNTEMPO CONTEMPORARY VOCAL SCORE EMOTIONAL EMPOWERING',
-              product: "LIFESTYLE",
-            },
-            {
-              title: "Johnnie Walker",
-              detail: "#walkinwithjohnnie​",
-              videoId: "vkQxdn2aN2U",
-              genre_style_mood: 'ELECTRONIC CONTEMPORARY CONTEMPORARY SCORE ANTHEM UPBEAT EMPOWERING',
-              product: "LIFESTYLE",
-            },
-            {
-              title: "OCBC Bank",
-              detail: "Unstoppable",
-              videoId: "CC4xHJVhsz4",
-              genre_style_mood: 'ELECTRONIC DANCE CONTEMPORARY SCORE ANTHEM VOCAL UPBEAT COOL EMPOWERING',
-              product: "FINANCE",
-            },
-            {
-              title: "Coca Cola",
-              detail: "Good Afternoon",
-              videoId: "T_L-BA8uLi0",
-              genre_style_mood: 'POP DANCE CONTEMPORARY VOCAL JINGLE UPBEAT COOL QUIRKY',
-              product: "F&B",
-            },
-            {
-              title: "DBS Treasures",
-              detail: "This is Digibanking",
-              videoId: "bAe3-V_St-g",
-              genre_style_mood: 'HIPHOP ELECTRONIC CONTEMPORARY VOCAL SCORE UPBEAT COOL QUIRKY',
-              product: "FINANCE",
-            },
-            {
-              title: "Absolut",
-              detail: "Create a Better Tomorrow",
-              videoId: "Vx66wnPgJRo",
-              genre_style_mood: 'ELECTRONIC ROCK CONTEMPORARY SCORE VOCAL ANTHEM UPBEAT EMPOWERING',
-              product: "F&B",
-            },
-            {
-              title: "Lux Arabia",
-              detail: "Be Ready",
-              videoId: "iNY7Jg6Pj7Y",
-              genre_style_mood: 'ELECTRONIC POP CONTEMPORARY VOCAL ANTHEM JINGLE UPBEAT EMPOWERING',
-              product: "BEAUTY",
-            },
-            {
-              title: "Jabong",
-              detail: "Be You",
-              videoId: "s2tBM7vrEwQ",
-              genre_style_mood: 'ORCHESTRAL CLASSIC JAZZ RETRO VOCAL JINGLE ROMANTIC EMOTIONAL EMPOWERING',
-              product: "FASHION",
-              thumbnailImg:"default.jpg"
-            },
-            {
-              title: "Volkswagen Tiguan All Space",
-              detail: "Fits All",
-              videoId: "u5L0XLQxmxU",
-              genre_style_mood: 'ELECTRONIC DANCE CONTEMPORARY SCORE UPBEAT COOL',
-              product: "AUTOMOBILE",
-            },
-            {
-              title: "Wild Spirit",
-              detail: "Never Ending Summer",
-              videoId: "ktL0TWn_h20",
-              genre_style_mood: 'ELECTRONIC DANCE CONTEMPORARY SCORE UPBEAT COOL SEXY',
-              product: "FASHION",
-            },
-            {
-              title: "Hero Motocorp",
-              detail: "We Ride",
-              videoId: "BFIwQyhOLEg",
-              genre_style_mood: 'ROCK INDIE BLUES CONTEMPORARY VOCAL ANTHEM JINGLE UPBEAT EMPOWERING',
-              product: "AUTOMOBILE",
-            },
-            {
-              title: "Cream Silk Philippines",
-              detail: "Conditioned for Greater",
-              videoId: "AfsQudX_tC0",
-              genre_style_mood: 'ELECTRONIC ORCHESTRAL CONTEMPORARY ANTHEM SCORE UPBEAT EMPOWERING',
-              product: "BEAUTY",
-            },
-            {
-              title: "Britannia Little Hearts",
-              detail: "Valentine's Special",
-              videoId: "-i-l81ACTsk",
-              genre_style_mood: 'INDIE ACCOUSTIC VOCAL JINGLE ROMANTIC UPBEAT QUIRKY',
-              product: "F&B",
-            },
-            {
-              title: "Volkswagen Tiguan",
-              detail: "For the Journeys Within",
-              videoId: "pkuX4wMbX1A",
-              genre_style_mood: 'AMBIENT ELECTRONIC DOWNTEMPO SCORE CHILL EMPOWERING',
-              product: "AUTOMOBILE",
-              thumbnailImg:"default.jpg"
-            },
-            {
-              title: "Tresemme",
-              detail: "Shower Radio",
-              videoId: "fxfOLeuqNcw",
-              genre_style_mood: 'ELECTRONIC POP DANCE CONTEMPORARY VOCAL JINGLE UPBEAT COOL',
-              product: "BEAUTY",
-            },
-            {
-              title: "Skechers",
-              detail: "Go Like Never Before",
-              videoId: "ixOPQn_6BzM",
-              genre_style_mood: 'ELECTRONIC CONTEMPORARY VOCAL SCORE UPBEAT COOL EMPOWERING',
-              product: "FASHION",
-            },
-            {
-              title: "Hotstar",
-              detail: "Premiere Nights",
-              videoId: "p3mZxkE-q7A",
-              genre_style_mood: 'HIPHOP CONTEMPORARY SCORE UPBEAT COOL',
-              product: "LIFESTYLE",
-            },
-            {
-              title: "Durex",
-              detail: "Mutual Climax",
-              videoId: "zEjZvDd9L4U",
-              genre_style_mood: 'DOWNTEMPO ELECTRONIC VOCAL SCORE COOL SEXY',
-              product: "HEALTHCARE",
-            },
-            {
-              title: "Lux Hair",
-              detail: "Shine",
-              videoId: "SCsNwczNfro",
-              genre_style_mood: 'ELECTRONIC POP CONTEMPORARY SCORE VOCAL ANTHEM UPBEAT EMPOWERING',
-              product: "BEAUTY",
-              thumbnailImg:"default.jpg"
-            },
-            {
-              title: "Pepe Jeans",
-              detail: "&nbsp;",
-              videoId: "GgLEgGogzBg",
-              genre_style_mood: 'ELECTRONIC DANCE CONTEMPORARY SCORE UPBEAT COOL',
-              product: "FASHION",
-            },
-            {
-              title: "Mahindra",
-              detail: "Alturas G4",
-              videoId: "vq6kmD3aMAs",
-              genre_style_mood: 'ORCHESTRAL RETRO VOCAL SCORE EMPOWERING',
-              product: "AUTOMOBILE",
-            },
-            {
-              title: "Myntra",
-              detail: "Beauty Edit",
-              videoId: "ogHmgQWQN0I",
-              genre_style_mood: 'ELECTRONIC ROCK POP CONTEMPORARY VOCAL JINGLE UPBEAT COOL EMPOWERING',
-              product: "FASHION",
-            },
-            {
-              title: "Jabong",
-              detail: "Out of This World",
-              videoId: "GqxYTFNd2B4",
-              genre_style_mood: 'ELECTRONIC POP DANCE CONTEMPORARY VOCAL JINGLE UPBEAT COOL QUIRKY',
-              product: "FASHION",
-            },
-            {
-              title: "Volkswagen Passat",
-              detail: "Luxury You Can't Give Up",
-              videoId: "W69sKwwbOKY",
-              genre_style_mood: 'ELECTRONIC FUSION CONTEMPORARY VOCAL SCORE UPBEAT COOL EMPOWERING',
-              product: "AUTOMOBILE",
-              thumbnailImg:"default.jpg"
-            },
-            {
-              title: "Bournvita Biscuits",
-              detail: "Bananas and Oats",
-              videoId: "cwVoIrcUdKE",
-              genre_style_mood: 'RETRO JAZZ SCORE UPBEAT QUIRKY HUMOUR',
-              product: "F&B",
-            },
-            {
-              title: "Bata Woman",
-              detail: "Comfortable With It",
-              videoId: "qANNAMY0YBk",
-              genre_style_mood: 'AMBIENT ELECTRONIC DOWNTEMPO ACCOUSTIC VOCAL SCORE EMOTIONAL EMPOWERING CHILL',
-              product: "FASHION",
-            },
-            {
-              title: "Tata Tiago",
-              detail: "Hide and Seek",
-              videoId: "TYtlnYaneWQ",
-              genre_style_mood: 'FUNK DANCE POP CONTEMPORARY VOCAL JINGLE UPBEAT COOL QUIRKY',
-              product: "AUTOMOBILE",
-            },
-            {
-              title: "Lakmé",
-              detail: "Absolute Spotlight",
-              videoId: "Xl6kLmavhmg",
-              genre_style_mood: 'ELECTRONIC CONTEMPORARY SCORE UPBEAT COOL',
-              product: "BEAUTY",
-            },
-            {
-              title: "Kia Seltos",
-              detail: "Badass by Design",
-              videoId: "ULBNSW1CgWw",
-              genre_style_mood: 'CONTEMPORARY ELECTRONIC SCORE COOL UPBEAT',
-              product: "AUTOMOBILE",
-            },
-            {
-              title: "MitTV",
-              detail: "Kiska Hai",
-              videoId: "fzmXHquUnIw",
-              genre_style_mood: 'RETRO POP BOLLYWOOD INDIAN VOCAL JINGLE UPBEAT QUIRKY HUMOUR',
-              product: "LIFESTYLE",
-            },
-            {
-              title: "Rajasthan Royals",
-              detail: "Halla Bol",
-              videoId: "omr2dgb0SDs",
-              genre_style_mood: 'BOLLYWOOD INDIAN VOCAL ANTHEM UPBEAT EMPOWERING',
-              product: "LIFESTYLE",
-            },
-            {
-              title: "TVS Sport",
-              detail: "15 Ka Dum",
-              videoId: "iqH9DawATWw",
-              genre_style_mood: 'INDIAN BOLLYWOOD CONTEMPORARY SCORE UPBEAT QUIRKY HUMOUR',
-              product: "AUTOMOBILE",
-            },
-            {
-              title: "Flipkart",
-              detail: "Choose Your Age",
-              videoId: "eM5NbAP69fo",
-              genre_style_mood: 'POP CONTEMPORARY VOCAL ANTHEM UPBEAT EMPOWERING EMOTIONAL',
-              product: "LIFESTYLE",
-            },
-            {
-              title: "Royal Enfield",
-              detail: "Celebrate the Dark",
-              videoId: "HjOeyKiNsuI",
-              genre_style_mood: 'RETRO ROCK BLUES INDIE ACCOUSTIC VOCAL JINGLE ANTHEM UPBEAT EMPOWERING',
-              product: "AUTOMOBILE",
-            },
-            {
-              title: "Nexa",
-              detail: "Create. Inspire.",
-              videoId: "MVX_raG2pxo",
-              genre_style_mood: 'ORCHESTRAL ELECTRONIC DOWNTEMPO CONTEMPORARY SCORE ANTHEM EMPOWERING EMOTIONAL',
-              product: "AUTOMOBILE",
-            },
-            {
-              title: "Siyaram's",
-              detail: "Coming Home",
-              videoId: "MdnFreJ3Zm8",
-              genre_style_mood: 'ORCHESTRAL CONTEMPORARY VOCAL JINGLE ANTHEM EMPOWERING EMOTIONAL',
-              product: "FASHION",
-            },
-            {
-              title: "Suzuki Gixxer",
-              detail: "Moment of Silence",
-              videoId: "Dg2aeEa1KwE",
-              genre_style_mood: 'ROCK ELECTRONIC CONTEMPORARY SCORE UPBEAT COOL EMPOWERING',
-              product: "AUTOMOBILE",
-            },
-            {
-              title: "Taj Hotels",
-              detail: "Tajness",
-              videoId: "MSBp3VNzhI8",
-              genre_style_mood: 'ORCHESTRAL CONTEMPORARY SCORE VOCAL ANTHEM EMPOWERING EMOTIONAL UPBEAT',
-              product: "LIFESTYLE",
-            },
-            {
-              title: "Urban Ladder",
-              detail: "The Itch",
-              videoId: "r44p01WWfyw",
-              genre_style_mood: 'ORCHESTRAL ELECTRONIC CONTEMPORARY SCORE EMPOWERING COOL EMOTIONAL',
-              product: "LIFESTYLE",
-            },
-            {
-              title: "White Hat Jr.",
-              detail: "Coding Seekho, Duniya Badlo!",
-              videoId: "fyl22SaDAnI",
-              genre_style_mood: 'ELECTRONIC POP CONTEMPORARY VOCAL ANTHEM UPBEAT COOL KIDS',
-              product: "LIFESTYLE",
-            },
-            {
-              title: "Disney",
-              detail: "Imagine That",
-              videoId: "SfAPDPEYIdU",
-              genre_style_mood: 'POP CONTEMPORARY VOCAL ANTHEM UPBEAT QUIRKY KIDS',
-              product: "LIFESTYLE",
-            },
-            ];
-            function splitCategoryBySpace(genre_style_mood) {
-            let str = genre_style_mood;
-            var res = str.toLowerCase();
-            let substr = res.split(' ');
-            let liDiv = "";      
-            substr.forEach(str1 => {
-              liDiv = liDiv + `<li class="${str1}_category"><a>${str1}</a></li>`;
-            });
-            return liDiv
-            }
-          
-          //insertData();
-          function insertData() {
-            var videosDiv = "";
-            var body = document.getElementsByTagName('body');
-            videosData.forEach((video) => {
-              let imgTag= ""
-              if(video.thumbnailImg) {
-                imgTag = `<img id="${video.videoId}" class="thumbnail-img" width="100%" height="200" src="https://img.youtube.com/vi/${video.videoId}/default.jpg"/>`;
-              }else{
-                imgTag = `<img id="${video.videoId}" class="thumbnail-img" width="100%" height="200" src="https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg"/>`;
-              }
-              videosDiv = videosDiv + `<div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item ${video.product.toLowerCase()} ${video.genre_style_mood.toLowerCase()}">
-                  <div class="thumbnail-header">
-                    <p class="thumbnail-title">${video.title}</p><p class="thumbnail-detail">${video.detail}</p>
-                  </div><div>${imgTag}</div>
-                  <div class="thumbnail-body"><p class="thumbnail-name"><a class="${video.product.toLowerCase()}_category" href="#">${video.product}</a></p><ul class="thumnail-content">${splitCategoryBySpace(video.genre_style_mood)}</ul></div></div>`;
-            });
-            document.getElementById("isotopegrid").innerHTML = videosDiv;
-          }
-        
-          setTimeout(insertData, 1);
+    <script type="text/javascript">
+      var genre_style_mood;
+      var videosData = [
+        {
+          title: "Porsche",
+          detail: "2021",
+          videoId: "XaxWxgt2wCk",
+          genre_style_mood: "ORCHESTRAL SCORE EMPOWERING",
+          product: "AUTOMOBILE",
+        },
+        {
+          title: "Durex Flavours",
+          detail: "Yacht",
+          videoId: "VER79ZWPKKg",
+          genre_style_mood: "DOWNTEMPO CONTEMPORARY VOCAL JINGLE COOL SEXY",
+          product: "HEALTHCARE",
+        },
+        {
+          title: "Puma",
+          detail: "Future Rider",
+          videoId: "jWIJlhlxsRc",
+          genre_style_mood: "HIPHOP SCORE VOCAL JINGLE UPBEAT COOL QUIRKY",
+          product: "FASHION",
+        },
+        {
+          title: "Grab",
+          detail: "Never Stop",
+          videoId: "Be5rchs7two",
+          genre_style_mood:
+            "AMBIENT ELECTRONIC DOWNTEMPO CONTEMPORARY VOCAL SCORE EMOTIONAL EMPOWERING",
+          product: "LIFESTYLE",
+        },
+        {
+          title: "Johnnie Walker",
+          detail: "#walkinwithjohnnie​",
+          videoId: "vkQxdn2aN2U",
+          genre_style_mood:
+            "ELECTRONIC CONTEMPORARY CONTEMPORARY SCORE ANTHEM UPBEAT EMPOWERING",
+          product: "LIFESTYLE",
+        },
+        {
+          title: "OCBC Bank",
+          detail: "Unstoppable",
+          videoId: "CC4xHJVhsz4",
+          genre_style_mood:
+            "ELECTRONIC DANCE CONTEMPORARY SCORE ANTHEM VOCAL UPBEAT COOL EMPOWERING",
+          product: "FINANCE",
+        },
+        {
+          title: "Coca Cola",
+          detail: "Good Afternoon",
+          videoId: "T_L-BA8uLi0",
+          genre_style_mood:
+            "POP DANCE CONTEMPORARY VOCAL JINGLE UPBEAT COOL QUIRKY",
+          product: "F&B",
+        },
+        {
+          title: "DBS Treasures",
+          detail: "This is Digibanking",
+          videoId: "bAe3-V_St-g",
+          genre_style_mood:
+            "HIPHOP ELECTRONIC CONTEMPORARY VOCAL SCORE UPBEAT COOL QUIRKY",
+          product: "FINANCE",
+        },
+        {
+          title: "Absolut",
+          detail: "Create a Better Tomorrow",
+          videoId: "Vx66wnPgJRo",
+          genre_style_mood:
+            "ELECTRONIC ROCK CONTEMPORARY SCORE VOCAL ANTHEM UPBEAT EMPOWERING",
+          product: "F&B",
+        },
+        {
+          title: "Lux Arabia",
+          detail: "Be Ready",
+          videoId: "iNY7Jg6Pj7Y",
+          genre_style_mood:
+            "ELECTRONIC POP CONTEMPORARY VOCAL ANTHEM JINGLE UPBEAT EMPOWERING",
+          product: "BEAUTY",
+        },
+        {
+          title: "Jabong",
+          detail: "Be You",
+          videoId: "s2tBM7vrEwQ",
+          genre_style_mood:
+            "ORCHESTRAL CLASSIC JAZZ RETRO VOCAL JINGLE ROMANTIC EMOTIONAL EMPOWERING",
+          product: "FASHION",
+          thumbnailImg: "default.jpg",
+        },
+        {
+          title: "Volkswagen Tiguan All Space",
+          detail: "Fits All",
+          videoId: "u5L0XLQxmxU",
+          genre_style_mood: "ELECTRONIC DANCE CONTEMPORARY SCORE UPBEAT COOL",
+          product: "AUTOMOBILE",
+        },
+        {
+          title: "Wild Spirit",
+          detail: "Never Ending Summer",
+          videoId: "ktL0TWn_h20",
+          genre_style_mood:
+            "ELECTRONIC DANCE CONTEMPORARY SCORE UPBEAT COOL SEXY",
+          product: "FASHION",
+        },
+        {
+          title: "Hero Motocorp",
+          detail: "We Ride",
+          videoId: "BFIwQyhOLEg",
+          genre_style_mood:
+            "ROCK INDIE BLUES CONTEMPORARY VOCAL ANTHEM JINGLE UPBEAT EMPOWERING",
+          product: "AUTOMOBILE",
+        },
+        {
+          title: "Cream Silk Philippines",
+          detail: "Conditioned for Greater",
+          videoId: "AfsQudX_tC0",
+          genre_style_mood:
+            "ELECTRONIC ORCHESTRAL CONTEMPORARY ANTHEM SCORE UPBEAT EMPOWERING",
+          product: "BEAUTY",
+        },
+        {
+          title: "Britannia Little Hearts",
+          detail: "Valentine's Special",
+          videoId: "-i-l81ACTsk",
+          genre_style_mood:
+            "INDIE ACCOUSTIC VOCAL JINGLE ROMANTIC UPBEAT QUIRKY",
+          product: "F&B",
+        },
+        {
+          title: "Volkswagen Tiguan",
+          detail: "For the Journeys Within",
+          videoId: "pkuX4wMbX1A",
+          genre_style_mood:
+            "AMBIENT ELECTRONIC DOWNTEMPO SCORE CHILL EMPOWERING",
+          product: "AUTOMOBILE",
+          thumbnailImg: "default.jpg",
+        },
+        {
+          title: "Tresemme",
+          detail: "Shower Radio",
+          videoId: "fxfOLeuqNcw",
+          genre_style_mood:
+            "ELECTRONIC POP DANCE CONTEMPORARY VOCAL JINGLE UPBEAT COOL",
+          product: "BEAUTY",
+        },
+        {
+          title: "Skechers",
+          detail: "Go Like Never Before",
+          videoId: "ixOPQn_6BzM",
+          genre_style_mood:
+            "ELECTRONIC CONTEMPORARY VOCAL SCORE UPBEAT COOL EMPOWERING",
+          product: "FASHION",
+        },
+        {
+          title: "Hotstar",
+          detail: "Premiere Nights",
+          videoId: "p3mZxkE-q7A",
+          genre_style_mood: "HIPHOP CONTEMPORARY SCORE UPBEAT COOL",
+          product: "LIFESTYLE",
+        },
+        {
+          title: "Durex",
+          detail: "Mutual Climax",
+          videoId: "zEjZvDd9L4U",
+          genre_style_mood: "DOWNTEMPO ELECTRONIC VOCAL SCORE COOL SEXY",
+          product: "HEALTHCARE",
+        },
+        {
+          title: "Lux Hair",
+          detail: "Shine",
+          videoId: "SCsNwczNfro",
+          genre_style_mood:
+            "ELECTRONIC POP CONTEMPORARY SCORE VOCAL ANTHEM UPBEAT EMPOWERING",
+          product: "BEAUTY",
+          thumbnailImg: "default.jpg",
+        },
+        {
+          title: "Pepe Jeans",
+          detail: "&nbsp;",
+          videoId: "GgLEgGogzBg",
+          genre_style_mood: "ELECTRONIC DANCE CONTEMPORARY SCORE UPBEAT COOL",
+          product: "FASHION",
+        },
+        {
+          title: "Mahindra",
+          detail: "Alturas G4",
+          videoId: "vq6kmD3aMAs",
+          genre_style_mood: "ORCHESTRAL RETRO VOCAL SCORE EMPOWERING",
+          product: "AUTOMOBILE",
+        },
+        {
+          title: "Myntra",
+          detail: "Beauty Edit",
+          videoId: "ogHmgQWQN0I",
+          genre_style_mood:
+            "ELECTRONIC ROCK POP CONTEMPORARY VOCAL JINGLE UPBEAT COOL EMPOWERING",
+          product: "FASHION",
+        },
+        {
+          title: "Jabong",
+          detail: "Out of This World",
+          videoId: "GqxYTFNd2B4",
+          genre_style_mood:
+            "ELECTRONIC POP DANCE CONTEMPORARY VOCAL JINGLE UPBEAT COOL QUIRKY",
+          product: "FASHION",
+        },
+        {
+          title: "Volkswagen Passat",
+          detail: "Luxury You Can't Give Up",
+          videoId: "W69sKwwbOKY",
+          genre_style_mood:
+            "ELECTRONIC FUSION CONTEMPORARY VOCAL SCORE UPBEAT COOL EMPOWERING",
+          product: "AUTOMOBILE",
+          thumbnailImg: "default.jpg",
+        },
+        {
+          title: "Bournvita Biscuits",
+          detail: "Bananas and Oats",
+          videoId: "cwVoIrcUdKE",
+          genre_style_mood: "RETRO JAZZ SCORE UPBEAT QUIRKY HUMOUR",
+          product: "F&B",
+        },
+        {
+          title: "Bata Woman",
+          detail: "Comfortable With It",
+          videoId: "qANNAMY0YBk",
+          genre_style_mood:
+            "AMBIENT ELECTRONIC DOWNTEMPO ACCOUSTIC VOCAL SCORE EMOTIONAL EMPOWERING CHILL",
+          product: "FASHION",
+        },
+        {
+          title: "Tata Tiago",
+          detail: "Hide and Seek",
+          videoId: "TYtlnYaneWQ",
+          genre_style_mood:
+            "FUNK DANCE POP CONTEMPORARY VOCAL JINGLE UPBEAT COOL QUIRKY",
+          product: "AUTOMOBILE",
+        },
+        {
+          title: "Lakmé",
+          detail: "Absolute Spotlight",
+          videoId: "Xl6kLmavhmg",
+          genre_style_mood: "ELECTRONIC CONTEMPORARY SCORE UPBEAT COOL",
+          product: "BEAUTY",
+        },
+        {
+          title: "Kia Seltos",
+          detail: "Badass by Design",
+          videoId: "ULBNSW1CgWw",
+          genre_style_mood: "CONTEMPORARY ELECTRONIC SCORE COOL UPBEAT",
+          product: "AUTOMOBILE",
+        },
+        {
+          title: "MitTV",
+          detail: "Kiska Hai",
+          videoId: "fzmXHquUnIw",
+          genre_style_mood:
+            "RETRO POP BOLLYWOOD INDIAN VOCAL JINGLE UPBEAT QUIRKY HUMOUR",
+          product: "LIFESTYLE",
+        },
+        {
+          title: "Rajasthan Royals",
+          detail: "Halla Bol",
+          videoId: "omr2dgb0SDs",
+          genre_style_mood: "BOLLYWOOD INDIAN VOCAL ANTHEM UPBEAT EMPOWERING",
+          product: "LIFESTYLE",
+        },
+        {
+          title: "TVS Sport",
+          detail: "15 Ka Dum",
+          videoId: "iqH9DawATWw",
+          genre_style_mood:
+            "INDIAN BOLLYWOOD CONTEMPORARY SCORE UPBEAT QUIRKY HUMOUR",
+          product: "AUTOMOBILE",
+        },
+        {
+          title: "Flipkart",
+          detail: "Choose Your Age",
+          videoId: "eM5NbAP69fo",
+          genre_style_mood:
+            "POP CONTEMPORARY VOCAL ANTHEM UPBEAT EMPOWERING EMOTIONAL",
+          product: "LIFESTYLE",
+        },
+        {
+          title: "Royal Enfield",
+          detail: "Celebrate the Dark",
+          videoId: "HjOeyKiNsuI",
+          genre_style_mood:
+            "RETRO ROCK BLUES INDIE ACCOUSTIC VOCAL JINGLE ANTHEM UPBEAT EMPOWERING",
+          product: "AUTOMOBILE",
+        },
+        {
+          title: "Nexa",
+          detail: "Create. Inspire.",
+          videoId: "MVX_raG2pxo",
+          genre_style_mood:
+            "ORCHESTRAL ELECTRONIC DOWNTEMPO CONTEMPORARY SCORE ANTHEM EMPOWERING EMOTIONAL",
+          product: "AUTOMOBILE",
+        },
+        {
+          title: "Siyaram's",
+          detail: "Coming Home",
+          videoId: "MdnFreJ3Zm8",
+          genre_style_mood:
+            "ORCHESTRAL CONTEMPORARY VOCAL JINGLE ANTHEM EMPOWERING EMOTIONAL",
+          product: "FASHION",
+        },
+        {
+          title: "Suzuki Gixxer",
+          detail: "Moment of Silence",
+          videoId: "Dg2aeEa1KwE",
+          genre_style_mood:
+            "ROCK ELECTRONIC CONTEMPORARY SCORE UPBEAT COOL EMPOWERING",
+          product: "AUTOMOBILE",
+        },
+        {
+          title: "Taj Hotels",
+          detail: "Tajness",
+          videoId: "MSBp3VNzhI8",
+          genre_style_mood:
+            "ORCHESTRAL CONTEMPORARY SCORE VOCAL ANTHEM EMPOWERING EMOTIONAL UPBEAT",
+          product: "LIFESTYLE",
+        },
+        {
+          title: "Urban Ladder",
+          detail: "The Itch",
+          videoId: "r44p01WWfyw",
+          genre_style_mood:
+            "ORCHESTRAL ELECTRONIC CONTEMPORARY SCORE EMPOWERING COOL EMOTIONAL",
+          product: "LIFESTYLE",
+        },
+        {
+          title: "White Hat Jr.",
+          detail: "Coding Seekho, Duniya Badlo!",
+          videoId: "fyl22SaDAnI",
+          genre_style_mood:
+            "ELECTRONIC POP CONTEMPORARY VOCAL ANTHEM UPBEAT COOL KIDS",
+          product: "LIFESTYLE",
+        },
+        {
+          title: "Disney",
+          detail: "Imagine That",
+          videoId: "SfAPDPEYIdU",
+          genre_style_mood: "POP CONTEMPORARY VOCAL ANTHEM UPBEAT QUIRKY KIDS",
+          product: "LIFESTYLE",
+        },
+      ];
+      function splitCategoryBySpace(genre_style_mood) {
+        let str = genre_style_mood;
+        var res = str.toLowerCase();
+        let substr = res.split(" ");
+        let liDiv = "";
+        substr.forEach((str1) => {
+          liDiv = liDiv + `<li class="${str1}_category"><a>${str1}</a></li>`;
+        });
+        return liDiv;
+      }
 
-        </script>
+      //insertData();
+      function insertData() {
+        var videosDiv = "";
+        var body = document.getElementsByTagName("body");
+        videosData.forEach((video) => {
+          let imgTag = "";
+          if (video.thumbnailImg) {
+            imgTag = `<img id="${video.videoId}" class="thumbnail-img" width="100%" height="200" src="https://img.youtube.com/vi/${video.videoId}/default.jpg"/>`;
+          } else {
+            imgTag = `<img id="${video.videoId}" class="thumbnail-img" width="100%" height="200" src="https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg"/>`;
+          }
+          videosDiv =
+            videosDiv +
+            `<div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item ${video.product.toLowerCase()} ${video.genre_style_mood.toLowerCase()}">
+                  <div class="thumbnail-header">
+                    <p class="thumbnail-title">${
+                      video.title
+                    }</p><p class="thumbnail-detail">${video.detail}</p>
+                  </div><div>${imgTag}</div>
+                  <div class="thumbnail-body"><p class="thumbnail-name"><a class="${video.product.toLowerCase()}_category" href="#">${
+              video.product
+            }</a></p><ul class="thumnail-content">${splitCategoryBySpace(
+              video.genre_style_mood
+            )}</ul></div></div>`;
+        });
+        document.getElementById("isotopegrid").innerHTML = videosDiv;
+      }
+
+      setTimeout(insertData, 1);
+    </script>
   </head>
 
   <body>
@@ -479,9 +519,20 @@
     <!-- Body -->
     <div class="container main-container relative">
       <div class="reset-icon">
-        <a class="show_all" href="javascript:void(0)"><img width="40" src="images/reset.png" /></a>
+        <a class="show_all" href="javascript:void(0)"
+          ><img width="40" src="images/reset.png"
+        /></a>
       </div>
-      <div class="grid row" id="isotopegrid">
+      <div class="grid row" id="isotopegrid"></div>
+      <div class="top_btn_div">
+        <a href="#"
+          ><img
+            class="top_btn_img"
+            id="myBtn"
+            width="40"
+            src="images/up_button_new.png"
+            onclick="topFunction()"
+        /></a>
       </div>
     </div>
     <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
