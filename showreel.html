@@ -30,7 +30,8 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(function () {   
-        $(".overlay").hide();     
+        $(".overlay").hide();  
+        $("#reset-icon").hide();   
         //Javascript for pop up video
         $(".thumbnail-img").click(function (event) {
           $(".overlay").show();
@@ -54,21 +55,10 @@
             // $("#inputSearch").click(function (event) {
             //     $(".checkboxes").show();
             // });
-            $(".searchBtn").click(function () {
-                var selectedCategory = "";
-                var checkboxes = $("input[class='chkcategory']:checked");
-                for(var i=0; i<checkboxes.length;){
-                    selectedCategory = selectedCategory + `.${checkboxes[i].value}`;
-                    i++;
-                    if(i<checkboxes.length) {
-                        selectedCategory = selectedCategory + ",";
-                    }
-                }
-                $grid.isotope({ filter: selectedCategory });
-            });
-                $("#inputSearch").click(function(){
+            
+                $("#searchIconBtn").click(function(){
                     $(".checkboxes").toggle();
-            });
+                });
         });
         
 </script>
@@ -117,9 +107,9 @@
                 </li>
               </ul>
               <form class="form-inline">
-                <div id="inputSearch" class="form-control inputStyle"></div>
+                <!-- <div id="inputSearch" class="form-control inputStyle"></div> -->
                   <!-- <input id="inputSearch" class="form-control hideSearch" type="search" aria-label="Search" autocomplete="false" readonly> -->
-                  <button class="searchBtn btn my-2 my-sm-0" type="button"></button>
+                  <button id="searchIconBtn" class="btn my-2 my-sm-0" type="button"></button>
               <div class="checkboxes">
                   <div class="checkbox-close-icon">
                     <img width="20" src="images/close-icon.png" />
@@ -190,8 +180,8 @@
     </div>
     <!-- Body -->
     <div class="container main-container relative">
-      <div class="reset-icon">
-        <a class="show_all" href="javascript:void(0)"><img title="Reset" width="40" src="images/reset.png" /></a>
+      <div id="reset-icon" class="reset-icon">
+        <a class="show_all" href="javascript:void(0)"><img title="View All" width="40" src="images/reset.png" /></a>
       </div>
       <div class="top_btn_div">
         <a href="javascript:void(0)"><img title="Scroll To Top" class="top_btn_img" id="myBtn" width="40" src="images/up_button_new.png" onclick="topFunction()" /></a>

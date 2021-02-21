@@ -58,6 +58,13 @@
         margin-top: 30px;
     }
 
+    #footer li {
+        text-align: center;
+        border-right: 0;
+        width: 100%;
+        line-height: 20px;
+    }
+
     /* Show reel page */
     .thumnail-content {
         height: auto;
@@ -98,8 +105,7 @@
     .crew-data {
         width: 300px;
     }
-    #footer li:first-child
-    {
+    #footer li:first-child {
         margin-left: 0px;
     }
 }

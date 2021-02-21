@@ -552,10 +552,11 @@
     border: solid 1px #999999;
     position: absolute;
     width: 300px;
-    top: 31px;
+    top: 30px;
     padding-left: 10px;
     padding-right: 10px;
     z-index: 20;
+    right: 0px;
 }
 .checkboxes ul {
     margin-top: 10px !important;

@@ -390,9 +390,9 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (topbtnimg && 
-    (document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300)
+  if (
+    topbtnimg &&
+    (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
   ) {
     topbtnimg.style.display = "block";
   } else {
@@ -427,240 +427,299 @@ function initIsotope() {
   $(".show_all").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: "*" });
+    $("#reset-icon").hide();
   });
 
   $(".fashion_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".fashion" });
+    $("#reset-icon").show();
   });
 
   $(".healthcare_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".healthcare" });
+    $("#reset-icon").show();
   });
 
   $(".finance_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".finance" });
+    $("#reset-icon").show();
   });
 
   $(".lifestyle_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".lifestyle" });
+    $("#reset-icon").show();
   });
 
   $(".automobile_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".automobile" });
+    $("#reset-icon").show();
   });
 
   $(".beauty_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".beauty" });
+    $("#reset-icon").show();
   });
 
   $(".orchestral_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".orchestral" });
     $(".orchestral_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".ambient_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".ambient" });
     $(".ambient_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".blues_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".blues" });
     $(".blues_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".bollywood_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".bollywood" });
     $(".bollywood_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".classic_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".classic" });
     $(".classic_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".contemporary_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".contemporary" });
     $(".contemporary_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".dance_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".dance" });
     $(".dance_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".downtempo_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".downtempo" });
     $(".downtempo_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".electronic_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".electronic" });
     $(".electronic_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".funk_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".funk" });
     $(".funk_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".fusion_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".fusion" });
     $(".fusion_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".hiphop_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".hiphop" });
     $(".hiphop_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".indian_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".indian" });
     $(".indian_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".indie_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".indie" });
     $(".indie_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".jazz_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".jazz" });
     $(".jazz_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".pop_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".pop" });
     $(".pop_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".retro_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".retro" });
     $(".retro_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".rock_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".rock" });
     $(".rock_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".anthem_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".anthem" });
     $(".anthem_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".jingle_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".jingle" });
     $(".jingle_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".rap_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".rap" });
     $(".rap_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".score_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".score" });
     $(".score_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".vocal_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".vocal" });
     $(".vocal_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".chill_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".chill" });
     $(".chill_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".cool_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".cool" });
     $(".cool_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".emotional_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".emotional" });
     $(".emotional_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".empowering_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".empowering" });
     $(".empowering_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".humour_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".humour" });
     $(".humour_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".kids_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".kids" });
     $(".kids_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".quirky_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".quirky" });
     $(".quirky_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".romantic_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".romantic" });
     $(".romantic_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".sexy_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".sexy" });
     $(".sexy_category a").addClass("selected");
+    $("#reset-icon").show();
   });
 
   $(".upbeat_category").on("click", function () {
     removeSelected();
     $(".upbeat_category a").addClass("selected");
     $grid.isotope({ filter: ".upbeat" });
+    $("#reset-icon").show();
   });
 
   $(".accoustic_category").on("click", function () {
     removeSelected();
     $(".accoustic_category a").addClass("selected");
     $grid.isotope({ filter: ".accoustic" });
+    $("#reset-icon").show();
+  });
+
+  $(".searchBtn").click(function () {
+    var selectedCategory = "";
+    var checkboxes = $("input[class='chkcategory']:checked");
+    for (var i = 0; i < checkboxes.length; ) {
+      let category = `.${checkboxes[i].value}`;
+      selectedCategory = selectedCategory + category;
+      $(`${category}_category a`).addClass("selected");
+      i++;
+      if (i < checkboxes.length) {
+        selectedCategory = selectedCategory + ",";
+      }
+    }
+    $grid.isotope({ filter: selectedCategory });
+    $("#reset-icon").show();
+    $(".checkboxes").hide();
+    $('.checkboxes input[class="chkcategory"]').prop('checked', false);
   });
 }
 function removeSelected() {
