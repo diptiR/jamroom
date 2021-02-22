@@ -52,15 +52,19 @@
           $('.checkboxes input[class="chkcategory"]').prop('checked', false);
         })
         $(".checkboxes").hide();
-            // $("#inputSearch").click(function (event) {
-            //     $(".checkboxes").show();
-            // });
-            
+          
                 $("#searchIconBtn").click(function(){
                     $(".checkboxes").toggle();
                 });
         });
-        
+
+        //Serach Icon code
+          $(".searchIcon").click(function ()
+          {
+            removeSelected();
+            $grid.isotope({ filter: "*" });
+          });
+
 </script>
 
   </head>
@@ -105,11 +109,18 @@
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
+                </li>
               </ul>
               <form class="form-inline">
                 <!-- <div id="inputSearch" class="form-control inputStyle"></div> -->
                   <!-- <input id="inputSearch" class="form-control hideSearch" type="search" aria-label="Search" autocomplete="false" readonly> -->
-                  <button id="searchIconBtn" class="btn my-2 my-sm-0" type="button"></button>
+                  <!-- <button id="searchIconBtn" class="btn my-2 my-sm-0" type="button"></button> -->
+                  <div class="search_icon_div">
+                    <img id="searchIconBtn" class="searchIcon" src="Images/Search_icon.png"/>
+                  </div>
+                  
               <div class="checkboxes">
                   <div class="checkbox-close-icon">
                     <img width="20" src="images/close-icon.png" />

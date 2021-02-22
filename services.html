@@ -16,7 +16,7 @@
     />
     <meta name="generator" content="Jekyll v3.8.3" />
 
-    <title>THE JAMROOM | CONTACT</title>
+    <title>THE JAMROOM | SERVICES</title>
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -28,21 +28,6 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        var classCycle = [
-          "contact_pg.png",
-          "contact_pg2.jpg",
-          "contact_pg3.jpg",
-          "contact_pg4.jpg",
-        ];
-
-        var randomNumber = Math.floor(Math.random() * classCycle.length);
-        var classToAdd = classCycle[randomNumber];
-
-        document.getElementById("contact-bg").src = `images/${classToAdd}`;
-      });
-    </script>
     <script type="text/javascript">
       // document.onreadystatechange = function () {
       //   if (document.readyState !== "complete") {
@@ -54,6 +39,21 @@
       //   }
       // };
     </script>
+    <script>
+      $(document).ready(function () {
+        var classCycle = [
+          "about-us-bg",
+          "about-us-bg2",
+          "about-us-bg3",
+          "about-us-bg4",
+        ];
+
+        var randomNumber = Math.floor(Math.random() * classCycle.length);
+        var classToAdd = classCycle[randomNumber];
+
+        $("#about-container").addClass(classToAdd);
+      });
+    </script>
   </head>
 
   <body>
@@ -61,7 +61,7 @@
       <img src="images/loader.gif" />
   </div> -->
     <!-- Header -->
-    <div class="container main-container">
+    <div class="container">
       <div class="row navigation">
         <div class="col-12">
           <nav class="navbar navbar-expand-lg navbar-light">
@@ -116,37 +116,20 @@
           </nav>
         </div>
       </div>
-      <!-- Body -->
-      <div class="row contact-content">
-        <div class="col-lg-4 col-md-4 col-sm-12 yellow-bg">
-          <div>
-            <p class="address-name">Singapore</p><br />
-            <p class="address-content">Tel: +65 84329781<br />E-mail:<br />
-              <a href="mailto:nariman@thejamroom.tv">nariman@thejamroom.tv</a></p><br />
-            <p class="address-name">India</p><br />
-            <p class="address-content">Tel: +91 9930937683 | 9833475402<br/>E-mail: <a href="mailto:mail@thejamroom.in">mail@thejamroom.in</a><br /></p><br />
-            <p class="address-name">United Kingdom</p><br />
-            <p class="address-content">Tel: +44 7585 645418<br />E-mail: <a href="mailto:annu@thejamroom.tv">annu@thejamroom.tv</a></p>
-            <a class="fb-logo" href="https://www.facebook.com/thejamroomaudio">
-          
-              <img class="fb-logo" src="images/fb_logo.png" />
-            </a>
-            </a>
-            <a class="insta-logo" href="https://www.instagram.com/thejamroomaudio/">
-              <img class="insta-logo" src="images/insta-logo.png" />
-            </a>
-            <a class="yt-logo" href="https://www.youtube.com/user/thejamroomindia">
-              <img class="yt-logo" src="images/youtube_logo.png" />
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-8 col-md-8 col-sm-12 contact-hero-bg" style="padding: 0">
-          <img
-            id="contact-bg"
-            class="img responsive"
-            src="images/contact_pg.png"
-            alt="Responsive image"
-          />
+    </div>
+    <!-- Body -->
+    <div class="container main-container nopadding">
+      <div id="about-container">
+        <div class="about-us">
+          <br />
+          Audio Production:<br />
+          The Jamroom undertakes all facets of audio post production, and can customise our service according to your requirements. Our audio production services encompass recording, dubbing, editing, mixing and mastering.<br /><br />
+          Music Composition:<br />
+          Music composition is The Jamroom’s forte. Chances are, the jingle stuck in your head has been written and scored by our award-winning team of composers. The Jamroom thrives on pushing beyond the typical barriers of ‘the sound of today’, and it’s this that’s allowed us to work on some of the most well-known clients - from the finance sector to automobiles. You can explore our work for DBS Bank, Coca Cola, Grab, Mercedes Benz, Volkswagen, Lux, DIG, Lifebuoy, OCBC Bank, McDonalds, Absolut, Durex, Netflix, IKEA, Mastercard, JBL, Puma, Tresemme, Dove, Ponds, Nivea, Cadbury, Bata, The Taj Group, Lakme, and more on our showreel.<br /><br />
+          Sound Design:<br />
+          With all-access to a dedicated team of experienced sound designers, a curated list of talented artists and a vast library of samples, The Jamroom is all set create customised, cutting-edge sound design.<br /><br />
+          Voice Casting:<br />
+          Over the years, The Jamroom’s worked with some of the finest artists in the industry, and know the best voice talent to call in for the job. Our bank of artists include singers and voiceovers – in all languages.<br /><br />
         </div>
       </div>
     </div>
