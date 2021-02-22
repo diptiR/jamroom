@@ -75,8 +75,11 @@
         right: 15px;
     }
 
-    .search_icon_div{
-        margin-left: 250px;
+    .search_icon_div
+    {
+        top: 120px;
+        right: 20px;
+        /* margin-left: 250px; */
     }
 
     #footer {
@@ -98,6 +101,13 @@
         width: 100% !important;
         max-width: none !important;
     }
+    .top_btn_div
+    {
+        position: fixed;
+        z-index: 2;
+        bottom: 30px;
+        right: 10px;
+    }
 }
 @media only screen and (max-width: 1025px) and (min-width: 768px) {
     .navbar-brand img {
@@ -111,5 +121,26 @@
     }
     #footer li:first-child {
         margin-left: 0px;
+    }
+    #services-div
+    {
+        width: 90%;
+        margin: 0 auto;
+        overflow: auto;
+        height: 550px !important;
+    }
+    .search_icon_div
+    {
+        top: 105px;
+        right: 12px;
+        /* margin-left: 250px; */
+    }
+
+    .top_btn_div
+    {
+        position: fixed;
+        z-index: 2;
+        bottom: 30px;
+        right: 1px;
     }
 }
