@@ -547,8 +547,7 @@
 .searchdiv {
     position: relative;
 }
-.checkboxes
-{
+.checkboxes {
     background-color: #ffffff;
     border: solid 1px #999999;
     position: absolute;
@@ -557,7 +556,7 @@
     padding-left: 10px;
     padding-right: 10px;
     z-index: 20;
-    left:-218px;
+    margin-left: -270px;
 }
 .checkboxes ul {
     margin-top: 10px !important;
@@ -661,8 +660,7 @@
     bottom: 20px;
     margin-left: 1180px;
 }
-.top_btn_img
-{
+.top_btn_img {
     display: none;
 }
 .checkbox-close-icon {
@@ -670,7 +668,7 @@
     cursor: pointer;
     padding-top: 2px;
 }
-.form-inline .checkboxes button {
+.checkboxes button {
     background: #000;
     color: #fff;
     width: auto;
@@ -691,14 +689,13 @@
 .btn-container button {
     float: right;
 }
-.searchIcon
-{
-    display:block;
+.searchIcon {
+    display: block;
 }
-.search_icon_div
-{
+.search_icon_div {
     position: fixed;
     z-index: 2;
-    top: 118px;
-    left: 1583px;  
+    /* bottom: 20px; */
+    margin-left: 1180px;
+    /* margin-left: 250px; */
 }

@@ -75,6 +75,10 @@
         right: 15px;
     }
 
+    .search_icon_div{
+        margin-left: 250px;
+    }
+
     #footer {
         padding-left: 10px;
         padding-right: 10px;
