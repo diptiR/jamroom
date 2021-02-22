@@ -424,6 +424,12 @@ function initIsotope() {
     },
   });
 
+  $("#searchIconImg").on("click", function () {
+    removeSelected();
+    $grid.isotope({ filter: "*" });
+    $("#reset-icon").hide();
+  });
+
   $(".show_all").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: "*" });
@@ -722,6 +728,22 @@ function initIsotope() {
     $('.checkboxes input[class="chkcategory"]').prop('checked', false);
   });
 }
+
+//Javascript for Search box and search icon
+$(document).ready(function () {
+  $(".checkbox-close-icon").click(() => {
+    $(".checkboxes").hide();
+    $('.checkboxes input[class="chkcategory"]').prop('checked', false);
+  })
+  $(".checkboxes").hide();
+    
+          $("#searchIconImg").click(function()
+          {
+              $(".checkboxes").toggle();
+          });
+  });
+
+
 function removeSelected() {
   $(".accoustic_category a").removeClass("selected");
   $(".upbeat_category a").removeClass("selected");

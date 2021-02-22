@@ -45,25 +45,7 @@
           });
         });
       });
-      //Javascript for Search box
-      $(document).ready(function () {
-        $(".checkbox-close-icon").click(() => {
-          $(".checkboxes").hide();
-          $('.checkboxes input[class="chkcategory"]').prop('checked', false);
-        })
-        $(".checkboxes").hide();
-          
-                $("#searchIconBtn").click(function(){
-                    $(".checkboxes").toggle();
-                });
-        });
-
-        //Serach Icon code
-          $(".searchIcon").click(function ()
-          {
-            removeSelected();
-            $grid.isotope({ filter: "*" });
-          });
+      
 
 </script>
 
@@ -118,7 +100,7 @@
                   <!-- <input id="inputSearch" class="form-control hideSearch" type="search" aria-label="Search" autocomplete="false" readonly> -->
                   <!-- <button id="searchIconBtn" class="btn my-2 my-sm-0" type="button"></button> -->
                   <div class="search_icon_div">
-                    <img id="searchIconBtn" class="searchIcon" src="Images/Search_icon.png"/>
+                    <img id="searchIconImg" class="searchIcon" src="Images/Search_icon.png"/>
                   </div>
                   
               <div class="checkboxes">
