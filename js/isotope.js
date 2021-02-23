@@ -52,6 +52,7 @@ const videosData = [
     videoId: "T_L-BA8uLi0",
     genre_style_mood: "POP DANCE CONTEMPORARY VOCAL JINGLE UPBEAT COOL QUIRKY",
     product: "F&B",
+    productClass: "f_b",
   },
   {
     title: "DBS Treasures",
@@ -68,6 +69,7 @@ const videosData = [
     genre_style_mood:
       "ELECTRONIC ROCK CONTEMPORARY SCORE VOCAL ANTHEM UPBEAT EMPOWERING",
     product: "F&B",
+    productClass: "f_b",
   },
   {
     title: "Lux Arabia",
@@ -122,6 +124,7 @@ const videosData = [
     videoId: "-i-l81ACTsk",
     genre_style_mood: "INDIE ACCOUSTIC VOCAL JINGLE ROMANTIC UPBEAT QUIRKY",
     product: "F&B",
+    productClass: "f_b",
   },
   {
     title: "Volkswagen Tiguan",
@@ -215,6 +218,7 @@ const videosData = [
     videoId: "cwVoIrcUdKE",
     genre_style_mood: "RETRO JAZZ SCORE UPBEAT QUIRKY HUMOUR",
     product: "F&B",
+    productClass: "f_b",
   },
   {
     title: "Bata Woman",
@@ -364,15 +368,21 @@ function initializeGridData() {
     } else {
       imgTag = `<img id="${video.videoId}" class="thumbnail-img" width="100%" height="200" src="https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg"/>`;
     }
+    let productClass = ""
+    if (video.productClass) {
+      productClass = video.productClass.toLowerCase()
+    } else {
+      productClass = video.product.toLowerCase()
+    }
     videosDiv =
       videosDiv +
-      `<div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item ${video.product.toLowerCase()} ${video.genre_style_mood.toLowerCase()}">
+      `<div class="col-sm-12 col-md-6 col-lg-4 thumbnail element-item ${productClass} ${video.genre_style_mood.toLowerCase()}">
         <div class="thumbnail-header">
           <p class="thumbnail-title">${
             video.title
           }</p><p class="thumbnail-detail">${video.detail}</p>
         </div><div>${imgTag}</div>
-        <div class="thumbnail-body"><p class="thumbnail-name"><a class="${video.product.toLowerCase()}_category" href="#">${
+        <div class="thumbnail-body"><p class="thumbnail-name"><a class="${productClass}_category" href="#">${
         video.product
       }</a></p><ul class="thumnail-content">${splitCategoryBySpace(
         video.genre_style_mood
@@ -439,6 +449,12 @@ function initIsotope() {
   $(".fashion_category").on("click", function () {
     removeSelected();
     $grid.isotope({ filter: ".fashion" });
+    $("#reset-icon").show();
+  });
+
+  $(".f_b_category").on("click", function () {
+    removeSelected();
+    $grid.isotope({ filter: ".f_b" });
     $("#reset-icon").show();
   });
 
@@ -725,7 +741,7 @@ function initIsotope() {
     $grid.isotope({ filter: selectedCategory });
     $("#reset-icon").show();
     $(".checkboxes").hide();
-    $('.checkboxes input[class="chkcategory"]').prop('checked', false);
+    $('.checkboxes input[class="chkcategory"]').prop("checked", false);
   });
 }
 
@@ -733,16 +749,14 @@ function initIsotope() {
 $(document).ready(function () {
   $(".checkbox-close-icon").click(() => {
     $(".checkboxes").hide();
-    $('.checkboxes input[class="chkcategory"]').prop('checked', false);
-  })
-  $(".checkboxes").hide();
-    
-          $("#searchIconImg").click(function()
-          {
-              $(".checkboxes").toggle();
-          });
+    $('.checkboxes input[class="chkcategory"]').prop("checked", false);
   });
+  $(".checkboxes").hide();
 
+  $("#searchIconImg").click(function () {
+    $(".checkboxes").toggle();
+  });
+});
 
 function removeSelected() {
   $(".accoustic_category a").removeClass("selected");
