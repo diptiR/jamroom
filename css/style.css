@@ -693,11 +693,13 @@
     display: block;
 }
 .search_icon_div {
+    cursor: pointer;
     position: fixed;
     z-index: 2;
     /* bottom: 20px; */
     margin-left: 1180px;
     /* margin-left: 250px; */
+    margin-top: -90px;
 }
 .facebook-logo
 {
